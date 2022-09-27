@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		80D2875D28E3BCBF006A8013 /* TorrentFreak_ReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2875C28E3BCBF006A8013 /* TorrentFreak_ReaderApp.swift */; };
+		80D2875F28E3BCBF006A8013 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2875E28E3BCBF006A8013 /* ContentView.swift */; };
+		80D2876128E3BCC0006A8013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80D2876028E3BCC0006A8013 /* Assets.xcassets */; };
+		80D2876428E3BCC0006A8013 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80D2876328E3BCC0006A8013 /* Preview Assets.xcassets */; };
+		80D2876E28E3BCC1006A8013 /* TorrentFreak_ReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2876D28E3BCC1006A8013 /* TorrentFreak_ReaderTests.swift */; };
+		80D2877828E3BCC1006A8013 /* TorrentFreak_ReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2877728E3BCC1006A8013 /* TorrentFreak_ReaderUITests.swift */; };
+		80D2877A28E3BCC1006A8013 /* TorrentFreak_ReaderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2877928E3BCC1006A8013 /* TorrentFreak_ReaderUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		80D2876A28E3BCC1006A8013 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80D2875128E3BCBE006A8013 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80D2875828E3BCBE006A8013;
+			remoteInfo = "TorrentFreak Reader";
+		};
+		80D2877428E3BCC1006A8013 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80D2875128E3BCBE006A8013 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80D2875828E3BCBE006A8013;
+			remoteInfo = "TorrentFreak Reader";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		80D2875928E3BCBE006A8013 /* TorrentFreak Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TorrentFreak Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80D2875C28E3BCBF006A8013 /* TorrentFreak_ReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentFreak_ReaderApp.swift; sourceTree = "<group>"; };
+		80D2875E28E3BCBF006A8013 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		80D2876028E3BCC0006A8013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		80D2876328E3BCC0006A8013 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		80D2876928E3BCC1006A8013 /* TorrentFreak ReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TorrentFreak ReaderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80D2876D28E3BCC1006A8013 /* TorrentFreak_ReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentFreak_ReaderTests.swift; sourceTree = "<group>"; };
+		80D2877328E3BCC1006A8013 /* TorrentFreak ReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TorrentFreak ReaderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80D2877728E3BCC1006A8013 /* TorrentFreak_ReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentFreak_ReaderUITests.swift; sourceTree = "<group>"; };
+		80D2877928E3BCC1006A8013 /* TorrentFreak_ReaderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentFreak_ReaderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		80D2875628E3BCBE006A8013 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80D2876628E3BCC1006A8013 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80D2877028E3BCC1006A8013 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		80D2875028E3BCBE006A8013 = {
+			isa = PBXGroup;
+			children = (
+				80D2875B28E3BCBE006A8013 /* TorrentFreak Reader */,
+				80D2876C28E3BCC1006A8013 /* TorrentFreak ReaderTests */,
+				80D2877628E3BCC1006A8013 /* TorrentFreak ReaderUITests */,
+				80D2875A28E3BCBE006A8013 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		80D2875A28E3BCBE006A8013 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80D2875928E3BCBE006A8013 /* TorrentFreak Reader.app */,
+				80D2876928E3BCC1006A8013 /* TorrentFreak ReaderTests.xctest */,
+				80D2877328E3BCC1006A8013 /* TorrentFreak ReaderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		80D2875B28E3BCBE006A8013 /* TorrentFreak Reader */ = {
+			isa = PBXGroup;
+			children = (
+				80D2875C28E3BCBF006A8013 /* TorrentFreak_ReaderApp.swift */,
+				80D2875E28E3BCBF006A8013 /* ContentView.swift */,
+				80D2876028E3BCC0006A8013 /* Assets.xcassets */,
+				80D2876228E3BCC0006A8013 /* Preview Content */,
+			);
+			path = "TorrentFreak Reader";
+			sourceTree = "<group>";
+		};
+		80D2876228E3BCC0006A8013 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				80D2876328E3BCC0006A8013 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		80D2876C28E3BCC1006A8013 /* TorrentFreak ReaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				80D2876D28E3BCC1006A8013 /* TorrentFreak_ReaderTests.swift */,
+			);
+			path = "TorrentFreak ReaderTests";
+			sourceTree = "<group>";
+		};
+		80D2877628E3BCC1006A8013 /* TorrentFreak ReaderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				80D2877728E3BCC1006A8013 /* TorrentFreak_ReaderUITests.swift */,
+				80D2877928E3BCC1006A8013 /* TorrentFreak_ReaderUITestsLaunchTests.swift */,
+			);
+			path = "TorrentFreak ReaderUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		80D2875828E3BCBE006A8013 /* TorrentFreak Reader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80D2877D28E3BCC1006A8013 /* Build configuration list for PBXNativeTarget "TorrentFreak Reader" */;
+			buildPhases = (
+				80D2875528E3BCBE006A8013 /* Sources */,
+				80D2875628E3BCBE006A8013 /* Frameworks */,
+				80D2875728E3BCBE006A8013 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TorrentFreak Reader";
+			productName = "TorrentFreak Reader";
+			productReference = 80D2875928E3BCBE006A8013 /* TorrentFreak Reader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		80D2876828E3BCC1006A8013 /* TorrentFreak ReaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80D2878028E3BCC1006A8013 /* Build configuration list for PBXNativeTarget "TorrentFreak ReaderTests" */;
+			buildPhases = (
+				80D2876528E3BCC1006A8013 /* Sources */,
+				80D2876628E3BCC1006A8013 /* Frameworks */,
+				80D2876728E3BCC1006A8013 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80D2876B28E3BCC1006A8013 /* PBXTargetDependency */,
+			);
+			name = "TorrentFreak ReaderTests";
+			productName = "TorrentFreak ReaderTests";
+			productReference = 80D2876928E3BCC1006A8013 /* TorrentFreak ReaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		80D2877228E3BCC1006A8013 /* TorrentFreak ReaderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80D2878328E3BCC1006A8013 /* Build configuration list for PBXNativeTarget "TorrentFreak ReaderUITests" */;
+			buildPhases = (
+				80D2876F28E3BCC1006A8013 /* Sources */,
+				80D2877028E3BCC1006A8013 /* Frameworks */,
+				80D2877128E3BCC1006A8013 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80D2877528E3BCC1006A8013 /* PBXTargetDependency */,
+			);
+			name = "TorrentFreak ReaderUITests";
+			productName = "TorrentFreak ReaderUITests";
+			productReference = 80D2877328E3BCC1006A8013 /* TorrentFreak ReaderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		80D2875128E3BCBE006A8013 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					80D2875828E3BCBE006A8013 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					80D2876828E3BCC1006A8013 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 80D2875828E3BCBE006A8013;
+					};
+					80D2877228E3BCC1006A8013 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 80D2875828E3BCBE006A8013;
+					};
+				};
+			};
+			buildConfigurationList = 80D2875428E3BCBE006A8013 /* Build configuration list for PBXProject "TorrentFreak Reader" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 80D2875028E3BCBE006A8013;
+			productRefGroup = 80D2875A28E3BCBE006A8013 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				80D2875828E3BCBE006A8013 /* TorrentFreak Reader */,
+				80D2876828E3BCC1006A8013 /* TorrentFreak ReaderTests */,
+				80D2877228E3BCC1006A8013 /* TorrentFreak ReaderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		80D2875728E3BCBE006A8013 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80D2876428E3BCC0006A8013 /* Preview Assets.xcassets in Resources */,
+				80D2876128E3BCC0006A8013 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80D2876728E3BCC1006A8013 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80D2877128E3BCC1006A8013 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		80D2875528E3BCBE006A8013 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80D2875F28E3BCBF006A8013 /* ContentView.swift in Sources */,
+				80D2875D28E3BCBF006A8013 /* TorrentFreak_ReaderApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80D2876528E3BCC1006A8013 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80D2876E28E3BCC1006A8013 /* TorrentFreak_ReaderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80D2876F28E3BCC1006A8013 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80D2877A28E3BCC1006A8013 /* TorrentFreak_ReaderUITestsLaunchTests.swift in Sources */,
+				80D2877828E3BCC1006A8013 /* TorrentFreak_ReaderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		80D2876B28E3BCC1006A8013 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80D2875828E3BCBE006A8013 /* TorrentFreak Reader */;
+			targetProxy = 80D2876A28E3BCC1006A8013 /* PBXContainerItemProxy */;
+		};
+		80D2877528E3BCC1006A8013 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80D2875828E3BCBE006A8013 /* TorrentFreak Reader */;
+			targetProxy = 80D2877428E3BCC1006A8013 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		80D2877B28E3BCC1006A8013 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		80D2877C28E3BCC1006A8013 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		80D2877E28E3BCC1006A8013 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TorrentFreak Reader/Preview Content\"";
+				DEVELOPMENT_TEAM = CY9HQHGW6J;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pmadel.TorrentFreak-Reader";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		80D2877F28E3BCC1006A8013 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TorrentFreak Reader/Preview Content\"";
+				DEVELOPMENT_TEAM = CY9HQHGW6J;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pmadel.TorrentFreak-Reader";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		80D2878128E3BCC1006A8013 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CY9HQHGW6J;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pmadel.TorrentFreak-ReaderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TorrentFreak Reader.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TorrentFreak Reader";
+			};
+			name = Debug;
+		};
+		80D2878228E3BCC1006A8013 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CY9HQHGW6J;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pmadel.TorrentFreak-ReaderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TorrentFreak Reader.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TorrentFreak Reader";
+			};
+			name = Release;
+		};
+		80D2878428E3BCC1006A8013 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CY9HQHGW6J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pmadel.TorrentFreak-ReaderUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "TorrentFreak Reader";
+			};
+			name = Debug;
+		};
+		80D2878528E3BCC1006A8013 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CY9HQHGW6J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pmadel.TorrentFreak-ReaderUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "TorrentFreak Reader";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		80D2875428E3BCBE006A8013 /* Build configuration list for PBXProject "TorrentFreak Reader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80D2877B28E3BCC1006A8013 /* Debug */,
+				80D2877C28E3BCC1006A8013 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80D2877D28E3BCC1006A8013 /* Build configuration list for PBXNativeTarget "TorrentFreak Reader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80D2877E28E3BCC1006A8013 /* Debug */,
+				80D2877F28E3BCC1006A8013 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80D2878028E3BCC1006A8013 /* Build configuration list for PBXNativeTarget "TorrentFreak ReaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80D2878128E3BCC1006A8013 /* Debug */,
+				80D2878228E3BCC1006A8013 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80D2878328E3BCC1006A8013 /* Build configuration list for PBXNativeTarget "TorrentFreak ReaderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80D2878428E3BCC1006A8013 /* Debug */,
+				80D2878528E3BCC1006A8013 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 80D2875128E3BCBE006A8013 /* Project object */;
+}
