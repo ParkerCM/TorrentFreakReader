@@ -7,13 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		80D2875D28E3BCBF006A8013 /* TorrentFreak_ReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2875C28E3BCBF006A8013 /* TorrentFreak_ReaderApp.swift */; };
-		80D2875F28E3BCBF006A8013 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2875E28E3BCBF006A8013 /* ContentView.swift */; };
+		801C018928E505B900F9D6C7 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801C018828E505B900F9D6C7 /* ArticleView.swift */; };
+		801C018B28E50A5000F9D6C7 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801C018A28E50A5000F9D6C7 /* CategoryView.swift */; };
+		801C018F28E50F3F00F9D6C7 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801C018E28E50F3F00F9D6C7 /* Article.swift */; };
+		801C019128E5113800F9D6C7 /* ArticlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801C019028E5113800F9D6C7 /* ArticlesViewModel.swift */; };
+		801C019428E514E300F9D6C7 /* TorrentFreakClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801C019328E514E300F9D6C7 /* TorrentFreakClient.swift */; };
+		801C019728E5220400F9D6C7 /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801C019628E5220400F9D6C7 /* ArticleService.swift */; };
+		801C019A28E525A000F9D6C7 /* Fuzi in Frameworks */ = {isa = PBXBuildFile; productRef = 801C019928E525A000F9D6C7 /* Fuzi */; };
+		80A8780528E9FD01009BB6BF /* LoadMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A8780428E9FD01009BB6BF /* LoadMoreView.swift */; };
+		80A8780728EA0240009BB6BF /* ArticlePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A8780628EA0240009BB6BF /* ArticlePageView.swift */; };
+		80A8780A28EA183B009BB6BF /* ArticleTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A8780928EA183B009BB6BF /* ArticleTitleView.swift */; };
+		80A8780C28EA22D9009BB6BF /* ArticleSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A8780B28EA22D9009BB6BF /* ArticleSectionType.swift */; };
+		80A8780E28EA233A009BB6BF /* ArticleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A8780D28EA233A009BB6BF /* ArticleSection.swift */; };
+		80D2875D28E3BCBF006A8013 /* TorrentFreakReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2875C28E3BCBF006A8013 /* TorrentFreakReaderApp.swift */; };
+		80D2875F28E3BCBF006A8013 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2875E28E3BCBF006A8013 /* HomePageView.swift */; };
 		80D2876128E3BCC0006A8013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80D2876028E3BCC0006A8013 /* Assets.xcassets */; };
 		80D2876428E3BCC0006A8013 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80D2876328E3BCC0006A8013 /* Preview Assets.xcassets */; };
 		80D2876E28E3BCC1006A8013 /* TorrentFreak_ReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2876D28E3BCC1006A8013 /* TorrentFreak_ReaderTests.swift */; };
 		80D2877828E3BCC1006A8013 /* TorrentFreak_ReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2877728E3BCC1006A8013 /* TorrentFreak_ReaderUITests.swift */; };
 		80D2877A28E3BCC1006A8013 /* TorrentFreak_ReaderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2877928E3BCC1006A8013 /* TorrentFreak_ReaderUITestsLaunchTests.swift */; };
+		80D2878C28E3CA38006A8013 /* LeadingArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2878B28E3CA38006A8013 /* LeadingArticleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +47,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		801C018828E505B900F9D6C7 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
+		801C018A28E50A5000F9D6C7 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		801C018E28E50F3F00F9D6C7 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		801C019028E5113800F9D6C7 /* ArticlesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewModel.swift; sourceTree = "<group>"; };
+		801C019328E514E300F9D6C7 /* TorrentFreakClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentFreakClient.swift; sourceTree = "<group>"; };
+		801C019628E5220400F9D6C7 /* ArticleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
+		80A8780428E9FD01009BB6BF /* LoadMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreView.swift; sourceTree = "<group>"; };
+		80A8780628EA0240009BB6BF /* ArticlePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlePageView.swift; sourceTree = "<group>"; };
+		80A8780928EA183B009BB6BF /* ArticleTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTitleView.swift; sourceTree = "<group>"; };
+		80A8780B28EA22D9009BB6BF /* ArticleSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleSectionType.swift; sourceTree = "<group>"; };
+		80A8780D28EA233A009BB6BF /* ArticleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleSection.swift; sourceTree = "<group>"; };
 		80D2875928E3BCBE006A8013 /* TorrentFreak Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TorrentFreak Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		80D2875C28E3BCBF006A8013 /* TorrentFreak_ReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentFreak_ReaderApp.swift; sourceTree = "<group>"; };
-		80D2875E28E3BCBF006A8013 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		80D2875C28E3BCBF006A8013 /* TorrentFreakReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentFreakReaderApp.swift; sourceTree = "<group>"; };
+		80D2875E28E3BCBF006A8013 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		80D2876028E3BCC0006A8013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80D2876328E3BCC0006A8013 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		80D2876928E3BCC1006A8013 /* TorrentFreak ReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TorrentFreak ReaderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +68,7 @@
 		80D2877328E3BCC1006A8013 /* TorrentFreak ReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TorrentFreak ReaderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80D2877728E3BCC1006A8013 /* TorrentFreak_ReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentFreak_ReaderUITests.swift; sourceTree = "<group>"; };
 		80D2877928E3BCC1006A8013 /* TorrentFreak_ReaderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentFreak_ReaderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		80D2878B28E3CA38006A8013 /* LeadingArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingArticleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				801C019A28E525A000F9D6C7 /* Fuzi in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +97,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		801C018C28E50F1000F9D6C7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				801C019028E5113800F9D6C7 /* ArticlesViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		801C018D28E50F1600F9D6C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				801C018E28E50F3F00F9D6C7 /* Article.swift */,
+				80A8780B28EA22D9009BB6BF /* ArticleSectionType.swift */,
+				80A8780D28EA233A009BB6BF /* ArticleSection.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		801C019228E514D000F9D6C7 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				801C019328E514E300F9D6C7 /* TorrentFreakClient.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		801C019528E521F300F9D6C7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				801C019628E5220400F9D6C7 /* ArticleService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		80A8780828EA1815009BB6BF /* ArticlePage */ = {
+			isa = PBXGroup;
+			children = (
+				80A8780928EA183B009BB6BF /* ArticleTitleView.swift */,
+			);
+			path = ArticlePage;
+			sourceTree = "<group>";
+		};
 		80D2875028E3BCBE006A8013 = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +162,12 @@
 		80D2875B28E3BCBE006A8013 /* TorrentFreak Reader */ = {
 			isa = PBXGroup;
 			children = (
-				80D2875C28E3BCBF006A8013 /* TorrentFreak_ReaderApp.swift */,
-				80D2875E28E3BCBF006A8013 /* ContentView.swift */,
+				801C019528E521F300F9D6C7 /* Service */,
+				801C019228E514D000F9D6C7 /* Client */,
+				801C018D28E50F1600F9D6C7 /* Models */,
+				801C018C28E50F1000F9D6C7 /* ViewModels */,
+				80D2878628E3C996006A8013 /* Views */,
+				80D2875C28E3BCBF006A8013 /* TorrentFreakReaderApp.swift */,
 				80D2876028E3BCC0006A8013 /* Assets.xcassets */,
 				80D2876228E3BCC0006A8013 /* Preview Content */,
 			);
@@ -127,6 +199,44 @@
 			path = "TorrentFreak ReaderUITests";
 			sourceTree = "<group>";
 		};
+		80D2878628E3C996006A8013 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				80D2878828E3C9F1006A8013 /* Elements */,
+				80D2878728E3C99D006A8013 /* Pages */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		80D2878728E3C99D006A8013 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				80D2875E28E3BCBF006A8013 /* HomePageView.swift */,
+				80A8780628EA0240009BB6BF /* ArticlePageView.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		80D2878828E3C9F1006A8013 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				80A8780828EA1815009BB6BF /* ArticlePage */,
+				80D2878928E3C9FF006A8013 /* HomePage */,
+				801C018A28E50A5000F9D6C7 /* CategoryView.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		80D2878928E3C9FF006A8013 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				80D2878B28E3CA38006A8013 /* LeadingArticleView.swift */,
+				801C018828E505B900F9D6C7 /* ArticleView.swift */,
+				80A8780428E9FD01009BB6BF /* LoadMoreView.swift */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +253,9 @@
 			dependencies = (
 			);
 			name = "TorrentFreak Reader";
+			packageProductDependencies = (
+				801C019928E525A000F9D6C7 /* Fuzi */,
+			);
 			productName = "TorrentFreak Reader";
 			productReference = 80D2875928E3BCBE006A8013 /* TorrentFreak Reader.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +328,9 @@
 				Base,
 			);
 			mainGroup = 80D2875028E3BCBE006A8013;
+			packageReferences = (
+				801C019828E525A000F9D6C7 /* XCRemoteSwiftPackageReference "Fuzi" */,
+			);
 			productRefGroup = 80D2875A28E3BCBE006A8013 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +373,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80D2875F28E3BCBF006A8013 /* ContentView.swift in Sources */,
-				80D2875D28E3BCBF006A8013 /* TorrentFreak_ReaderApp.swift in Sources */,
+				80D2875F28E3BCBF006A8013 /* HomePageView.swift in Sources */,
+				801C019428E514E300F9D6C7 /* TorrentFreakClient.swift in Sources */,
+				80A8780E28EA233A009BB6BF /* ArticleSection.swift in Sources */,
+				80D2878C28E3CA38006A8013 /* LeadingArticleView.swift in Sources */,
+				80A8780528E9FD01009BB6BF /* LoadMoreView.swift in Sources */,
+				801C018F28E50F3F00F9D6C7 /* Article.swift in Sources */,
+				80A8780728EA0240009BB6BF /* ArticlePageView.swift in Sources */,
+				80D2875D28E3BCBF006A8013 /* TorrentFreakReaderApp.swift in Sources */,
+				801C019728E5220400F9D6C7 /* ArticleService.swift in Sources */,
+				801C018928E505B900F9D6C7 /* ArticleView.swift in Sources */,
+				801C018B28E50A5000F9D6C7 /* CategoryView.swift in Sources */,
+				80A8780A28EA183B009BB6BF /* ArticleTitleView.swift in Sources */,
+				801C019128E5113800F9D6C7 /* ArticlesViewModel.swift in Sources */,
+				80A8780C28EA22D9009BB6BF /* ArticleSectionType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +548,7 @@
 				DEVELOPMENT_TEAM = CY9HQHGW6J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = TorrentFreak;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -430,7 +559,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pmadel.TorrentFreak-Reader";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pmadel.torrentfreak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -449,6 +578,7 @@
 				DEVELOPMENT_TEAM = CY9HQHGW6J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = TorrentFreak;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -459,7 +589,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pmadel.TorrentFreak-Reader";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pmadel.torrentfreak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -583,6 +713,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		801C019828E525A000F9D6C7 /* XCRemoteSwiftPackageReference "Fuzi" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cezheng/Fuzi";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		801C019928E525A000F9D6C7 /* Fuzi */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 801C019828E525A000F9D6C7 /* XCRemoteSwiftPackageReference "Fuzi" */;
+			productName = Fuzi;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 80D2875128E3BCBE006A8013 /* Project object */;
 }

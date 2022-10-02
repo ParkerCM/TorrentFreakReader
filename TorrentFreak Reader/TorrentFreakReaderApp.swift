@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct TorrentFreak_ReaderApp: App {
+struct TorrentFreakReaderApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomePageView()
         }
     }
 }
