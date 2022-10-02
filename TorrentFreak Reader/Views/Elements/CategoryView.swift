@@ -35,8 +35,12 @@ struct CategoryView: View {
             return .red
         case "Research":
             return .blue
-        default:
+        case "Piracy":
             return .green
+        case "Opinion Article":
+            return .cyan
+        default:
+            return .cyan
         }
     }
 }

@@ -18,9 +18,9 @@ struct ArticlePageView: View {
             ForEach(viewModel.articleSections, id: \.self) { section in
                 switch section.sectionType {
                 case .title:
-                    ArticleTitleView(article: article)
+                    ArticleTitleView(section: section)
                 case .image:
-                    ArticleTitleView(article: article)
+                    ArticleImageView(section: section)
                 case .subHeader:
                     ArticleSubHeaderView(section: section)
                 case .exerpt:

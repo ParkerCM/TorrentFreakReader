@@ -25,7 +25,7 @@ class ArticleSectionService {
                 
                 var articleSections: [ArticleSection] = []
                 
-                articleSections.append(ArticleSection(article: article, content: "", sectionType: .title))
+                articleSections.append(ArticleSection(article: article, content: "", categories: getCategories(document: document), sectionType: .title))
                 articleSections.append(getArticleExerpt(article: article, document: document))
                 articleSections.append(contentsOf: getMainArticleSections(article: article, document: document))
                 
@@ -41,11 +41,11 @@ class ArticleSectionService {
     private func getArticleExerpt(article: Article, document: HTMLDocument) -> ArticleSection {
         let exerpt = document.xpath("//article/header/p[2]").first?.stringValue ?? ""
         
-        return ArticleSection(article: article, content: exerpt.replacingOccurrences(of: "\n", with: ""), sectionType: .exerpt)
+        return ArticleSection(article: article, content: exerpt.replacingOccurrences(of: "\n", with: "").trimmingCharacters(in: .whitespacesAndNewlines), categories: getCategories(document: document), sectionType: .exerpt)
     }
     
     private func getMainArticleSections(article: Article, document: HTMLDocument) -> [ArticleSection] {
-        let parts = document.xpath("//article/div/p|//article/div/h2")
+        let parts = document.xpath("//article/div/p|//article/div/h2|//article/div/center/a|//article/div/center/img|//article/div/p/img|//article/div/p/a/img")
         var sections: [ArticleSection] = []
         
         for part in parts {
@@ -53,10 +53,18 @@ class ArticleSectionService {
                 switch tag {
                 case "p":
                     if !part.stringValue.isEmpty {
-                        sections.append(ArticleSection(article: article, content: part.stringValue, sectionType: .content))
+                        sections.append(ArticleSection(article: article, content: part.stringValue, categories: getCategories(document: document),sectionType: .content))
                     }
                 case "h2":
-                    sections.append(ArticleSection(article: article, content: part.stringValue, sectionType: .subHeader))
+                    sections.append(ArticleSection(article: article, content: part.stringValue, categories: getCategories(document: document),sectionType: .subHeader))
+                case "a":
+                    if let imageLink = part["href"] {
+                        sections.append(ArticleSection(article: article, content: imageLink, categories: getCategories(document: document),sectionType: .image))
+                    }
+                case "img":
+                    if let imageLink = part["src"] {
+                        sections.append(ArticleSection(article: article, content: imageLink, categories: getCategories(document: document),sectionType: .image))
+                    }
                 default:
                     print("Hit the default case")
                 }
@@ -64,6 +72,19 @@ class ArticleSectionService {
         }
         
         return sections
+    }
+    
+    private func getCategories(document: HTMLDocument) -> [String] {
+        let categories = document.xpath("//header/p/span/a")
+        var categoryArray: [String] = []
+        
+        for categoy in categories {
+            if categoy.stringValue != "Home" {
+                categoryArray.append(categoy.stringValue)
+            }
+        }
+        
+        return categoryArray
     }
     
 }

@@ -13,6 +13,8 @@ struct ArticleSection: Hashable {
     
     var content: String
     
+    var categories: [String]
+    
     var sectionType: ArticleSectionType
     
 }
