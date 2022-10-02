@@ -9,10 +9,36 @@ import SwiftUI
 
 struct ArticlePageView: View {
     
+    @StateObject var viewModel = ArticleViewModel()
+    
     let article: Article
     
     var body: some View {
-        ArticleTitleView(article: article)
+        List {
+            ForEach(viewModel.articleSections, id: \.self) { section in
+                switch section.sectionType {
+                case .title:
+                    ArticleTitleView(article: article)
+                case .image:
+                    ArticleTitleView(article: article)
+                case .subHeader:
+                    ArticleSubHeaderView(section: section)
+                case .exerpt:
+                    ArticleExcerptView(section: section)
+                case .content:
+                    ArticleContentView(section: section)
+                }
+            }
+            .listRowSeparator(.hidden)
+        }
+        .listStyle(PlainListStyle())
+        .navigationBarTitle("TorrentFreak", displayMode: .inline)
+        .onAppear {
+            viewModel.fetchArticleSections(article: article)
+        }
+        .refreshable {
+            // Do nothing
+        }
     }
 }
 

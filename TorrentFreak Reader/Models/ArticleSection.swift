@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct ArticleSection {
+struct ArticleSection: Hashable {
     
-    let article: Article
+    var article: Article
     
-    let content: String
+    var content: String
     
-    let sectionType: ArticleSectionType
+    var sectionType: ArticleSectionType
     
 }

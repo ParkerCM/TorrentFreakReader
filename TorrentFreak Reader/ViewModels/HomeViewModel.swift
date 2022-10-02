@@ -8,7 +8,7 @@
 import Foundation
 
 @MainActor
-class ArticlesViewModel: ObservableObject {
+class HomeViewModel: ObservableObject {
     
     @Published var articles: [Article] = []
     

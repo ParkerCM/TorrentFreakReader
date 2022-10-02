@@ -10,7 +10,7 @@ import Fuzi
 
 class ArticleService {
     
-    private let client: TorrentFreakClient = TorrentFreakClient()
+    private let client = TorrentFreakClient.shared
     
     private let TOTAL_ARTICLES = 9
     
@@ -46,7 +46,6 @@ class ArticleService {
     private func parseLeadArticle(document: HTMLDocument, html: String) -> Article? {
         let title = document.xpath("//section//h1").first?.stringValue ?? ""
         let author = document.xpath("//section/a//footer/div").first?.stringValue ?? ""
-        print(author)
         let imageUrl = document.xpath("//section/a").first?["style"] ?? ""
         let articleUrl = document.xpath("//section/a").first?["href"] ?? ""
         let date = document.xpath("//section/a//time").first?.stringValue ?? ""
@@ -76,7 +75,6 @@ class ArticleService {
             
             let title = document.xpath("//div[\(i)]/article//h3").first?.stringValue ?? ""
             let author = document.xpath("//div[\(i)]/article//span").first?.stringValue ?? ""
-            print(author)
             let category = document.xpath("//div[\(i)]/article//header//p").first?.stringValue ?? ""
             let imageUrl = document.xpath("//div[\(i)]/article//header//img").first?["src"] ?? ""
             let articleUrl = document.xpath("//div[\(i)]/article/a").first?["href"] ?? ""

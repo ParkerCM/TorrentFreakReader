@@ -14,8 +14,8 @@
             filePath = "TorrentFreak Reader/Client/TorrentFreakClient.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
             landmarkName = "sendPageRequest(page:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "TorrentFreak Reader/Service/ArticleService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "parseLeadArticle(document:html:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -55,49 +55,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B54C25D4-8899-4EBF-AE39-E8651F90834D"
+            uuid = "CCCD2AB8-B823-46C4-AFC1-7EB2D44F9880"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TorrentFreak Reader/Service/ArticleService.swift"
+            filePath = "TorrentFreak Reader/Service/ArticleSectionService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "parseLeadArticle(document:html:)"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "getMainArticleSections(article:document:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B54C25D4-8899-4EBF-AE39-E8651F90834D - dff2dec9fdac248d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TorrentFreak_Reader.ArticleService.parseLeadArticle(document: Fuzi.HTMLDocument, html: Swift.String) -&gt; Swift.Optional&lt;TorrentFreak_Reader.Article&gt;"
-                  moduleName = "TorrentFreak Reader"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/parkermadel/Documents/iOS%20Development/TorrentFreak%20Reader/TorrentFreak%20Reader/Service/ArticleService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "1312">
-               </Location>
-               <Location
-                  uuid = "B54C25D4-8899-4EBF-AE39-E8651F90834D - dff2dec9fdac248d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TorrentFreak_Reader.ArticleService.parseLeadArticle(document: Fuzi.HTMLDocument, html: Swift.String) -&gt; Swift.Optional&lt;TorrentFreak_Reader.Article&gt;"
-                  moduleName = "TorrentFreak Reader"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/parkermadel/Documents/iOS%20Development/TorrentFreak%20Reader/TorrentFreak%20Reader/Service/ArticleService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "1424">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomePageView: View {
     
-    @StateObject private var viewModel = ArticlesViewModel()
+    @StateObject private var viewModel = HomeViewModel()
     
     @State private var page = 1
         
@@ -21,14 +21,13 @@ struct HomePageView: View {
                         LeadingArticleView(title: article.title, imageUrl: article.imageUrl)
                             .background(NavigationLink("", destination: ArticlePageView(article: article))
                                 .opacity(0.0))
-                            .listRowSeparator(.hidden)
                     } else {
                         NavigationLink(destination: ArticlePageView(article: article)) {
                             ArticleView(article: article)
                         }
-                        .listRowSeparator(.hidden)
                     }
                 }
+                .listRowSeparator(.hidden)
                 
                 LoadMoreView()
                     .listRowSeparator(.hidden)
