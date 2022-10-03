@@ -37,7 +37,7 @@ struct ArticlePageView: View {
             viewModel.fetchArticleSections(article: article)
         }
         .refreshable {
-            // Do nothing
+            viewModel.fetchArticleSections(article: article)
         }
     }
 }

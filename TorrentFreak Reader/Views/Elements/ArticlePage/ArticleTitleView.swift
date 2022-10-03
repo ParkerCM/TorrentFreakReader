@@ -17,6 +17,7 @@ struct ArticleTitleView: View {
                 .font(.largeTitle)
                 .bold()
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .frame(minHeight: 300)
                 .padding(.trailing, 35)
                 .background(
                     AsyncImage(url: URL(string: section.article.imageUrl)) { image in

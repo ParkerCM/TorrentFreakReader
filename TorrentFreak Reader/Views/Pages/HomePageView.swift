@@ -12,7 +12,7 @@ struct HomePageView: View {
     @StateObject private var viewModel = HomeViewModel()
     
     @State private var page = 1
-        
+    
     var body: some View {
         NavigationView {
             List {
