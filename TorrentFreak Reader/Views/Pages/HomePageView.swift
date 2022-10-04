@@ -18,22 +18,24 @@ struct HomePageView: View {
             List {
                 ForEach(viewModel.articles, id: \.self) { article in
                     if article.isLeading {
-                        LeadingArticleView(title: article.title, imageUrl: article.imageUrl)
+                        LeadingArticleView(title: article.title, imageUrl: article.imageUrl, usePlaceHolderImage: viewModel.isPlaceHolder)
                             .background(NavigationLink("", destination: ArticlePageView(article: article))
                                 .opacity(0.0))
                     } else {
                         NavigationLink(destination: ArticlePageView(article: article)) {
-                            ArticleView(article: article)
+                            ArticleView(article: article, usePlaceHolderImage: viewModel.isPlaceHolder)
                         }
                     }
                 }
                 .listRowSeparator(.hidden)
+                .redacted(when: viewModel.isPlaceHolder)
                 
                 LoadMoreView()
                     .listRowSeparator(.hidden)
                     .onTapGesture {
                         getArticles()
                     }
+                    .hidden(viewModel.hideLoadMore)
             }
             .navigationTitle("Home")
             .listStyle(PlainListStyle())
@@ -51,6 +53,21 @@ struct HomePageView: View {
         viewModel.fetchNewArticles(page: page)
         self.page += 1
     }
+}
+
+extension View {
+    func hidden(_ shouldHide: Bool) -> some View {
+        opacity(shouldHide ? 0 : 1)
+    }
+    
+    @ViewBuilder
+        func redacted(when condition: Bool) -> some View {
+            if !condition {
+                unredacted()
+            } else {
+                redacted(reason: .placeholder)
+            }
+        }
 }
 
 struct ContentView_Previews: PreviewProvider {

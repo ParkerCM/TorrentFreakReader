@@ -13,6 +13,8 @@ struct LeadingArticleView: View {
     
     let imageUrl: String
     
+    let usePlaceHolderImage: Bool
+    
     var body: some View {
         AsyncImage(url: URL(string: imageUrl)) { image in 
             image.opacity(0.5)
@@ -26,7 +28,21 @@ struct LeadingArticleView: View {
                         .padding(.trailing, 5)
                 }
         } placeholder: {
-            ProgressView()
+            if usePlaceHolderImage {
+                Image("placeholder_image")
+                    .opacity(0.5)
+                    .frame(width: 375, height: 225)
+                    .cornerRadius(15)
+                    .overlay {
+                        Text(title)
+                            .foregroundColor(.white)
+                            .font(.title)
+                            .padding(.leading, 5)
+                            .padding(.trailing, 5)
+                    }
+            } else {
+                ProgressView()
+            }
         }
         .frame(width: 375, height: 225)
     }
@@ -34,6 +50,6 @@ struct LeadingArticleView: View {
 
 struct LeadingArticleView_Previews: PreviewProvider {
     static var previews: some View {
-        LeadingArticleView(title: "This is a really cool title with some other things going on.", imageUrl: "https://torrentfreak.com/images/russia-kremlin.jpg")
+        LeadingArticleView(title: "This is a really cool title with some other things going on.", imageUrl: "https://torrentfreak.com/images/russia-kremlin.jpg", usePlaceHolderImage: false)
     }
 }
