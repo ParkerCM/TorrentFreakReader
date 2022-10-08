@@ -30,7 +30,7 @@ struct HomePageView: View {
                 .listRowSeparator(.hidden)
                 .redacted(when: viewModel.isPlaceHolder)
                 
-                LoadMoreView()
+                LoadMoreView(isGettingNextPage: $viewModel.isGettingNextPage)
                     .listRowSeparator(.hidden)
                     .onTapGesture {
                         getArticles()
@@ -61,13 +61,13 @@ extension View {
     }
     
     @ViewBuilder
-        func redacted(when condition: Bool) -> some View {
-            if !condition {
-                unredacted()
-            } else {
-                redacted(reason: .placeholder)
-            }
+    func redacted(when condition: Bool) -> some View {
+        if !condition {
+            unredacted()
+        } else {
+            redacted(reason: .placeholder)
         }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {

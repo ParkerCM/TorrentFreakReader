@@ -14,12 +14,15 @@ class HomeViewModel: ObservableObject {
     
     @Published var hideLoadMore = true
     
+    @Published var isGettingNextPage = false
+    
     @Published var isPlaceHolder = true
     
     private let service: ArticleService = ArticleService()
     
     func fetchNewArticles(page: Int) {
         Task.init {
+            self.isGettingNextPage = true
             let articles = await service.getArticles(page: page)
             
             if self.isPlaceHolder {
@@ -29,6 +32,7 @@ class HomeViewModel: ObservableObject {
                 self.articles.append(contentsOf: await service.getArticles(page: page))
             }
             
+            self.isGettingNextPage = false
             self.hideLoadMore = false
         }
     }

@@ -14,6 +14,7 @@
 		801C019428E514E300F9D6C7 /* TorrentFreakClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801C019328E514E300F9D6C7 /* TorrentFreakClient.swift */; };
 		801C019728E5220400F9D6C7 /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801C019628E5220400F9D6C7 /* ArticleService.swift */; };
 		801C019A28E525A000F9D6C7 /* Fuzi in Frameworks */ = {isa = PBXBuildFile; productRef = 801C019928E525A000F9D6C7 /* Fuzi */; };
+		805424AB28F0FE99005F93D3 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 805424AA28F0FE99005F93D3 /* SDWebImageSwiftUI */; };
 		80A8780528E9FD01009BB6BF /* LoadMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A8780428E9FD01009BB6BF /* LoadMoreView.swift */; };
 		80A8780728EA0240009BB6BF /* ArticlePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A8780628EA0240009BB6BF /* ArticlePageView.swift */; };
 		80A8780A28EA183B009BB6BF /* ArticleTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A8780928EA183B009BB6BF /* ArticleTitleView.swift */; };
@@ -90,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				805424AB28F0FE99005F93D3 /* SDWebImageSwiftUI in Frameworks */,
 				801C019A28E525A000F9D6C7 /* Fuzi in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +286,7 @@
 			name = "TorrentFreak Reader";
 			packageProductDependencies = (
 				801C019928E525A000F9D6C7 /* Fuzi */,
+				805424AA28F0FE99005F93D3 /* SDWebImageSwiftUI */,
 			);
 			productName = "TorrentFreak Reader";
 			productReference = 80D2875928E3BCBE006A8013 /* TorrentFreak Reader.app */;
@@ -359,6 +362,7 @@
 			mainGroup = 80D2875028E3BCBE006A8013;
 			packageReferences = (
 				801C019828E525A000F9D6C7 /* XCRemoteSwiftPackageReference "Fuzi" */,
+				805424A928F0FE99005F93D3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 80D2875A28E3BCBE006A8013 /* Products */;
 			projectDirPath = "";
@@ -759,6 +763,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		805424A928F0FE99005F93D3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -766,6 +778,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 801C019828E525A000F9D6C7 /* XCRemoteSwiftPackageReference "Fuzi" */;
 			productName = Fuzi;
+		};
+		805424AA28F0FE99005F93D3 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 805424A928F0FE99005F93D3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

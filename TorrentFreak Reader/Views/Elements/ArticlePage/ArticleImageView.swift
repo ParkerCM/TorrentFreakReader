@@ -6,20 +6,17 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ArticleImageView: View {
     
     let section: ArticleSection
     
     var body: some View {
-        AsyncImage(url: URL(string: section.content)) { image in
-            image.resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(maxWidth: .infinity)
-        } placeholder: {
-            ProgressView()
-        }
-        .frame(maxWidth: .infinity)
+        WebImage(url: URL(string: section.content))
+            .resizable()
+            .scaledToFit()
+            .frame(maxWidth: .infinity)
     }
 }
 

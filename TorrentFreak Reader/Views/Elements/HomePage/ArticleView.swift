@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ArticleView: View {
     
@@ -15,20 +16,11 @@ struct ArticleView: View {
     
     var body: some View {
         HStack (spacing: 15) {
-            AsyncImage(url: URL(string: article.imageUrl)) { image in
-                image.resizable()
-                    .scaledToFill()
-            } placeholder: {
-                if usePlaceHolderImage {
-                    Image("placeholder_image")
-                        .resizable()
-                            .scaledToFill()
-                } else {
-                    ProgressView()
-                }
-            }
-            .frame(width: 150)
-            .cornerRadius(10)
+            WebImage(url: URL(string: article.imageUrl))
+                .resizable()
+                .scaledToFill()
+                .frame(width: 150)
+                .cornerRadius(10)
 
             VStack {
                 Text(article.title)
