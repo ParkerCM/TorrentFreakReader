@@ -21,6 +21,7 @@ struct ArticlePageView: View {
                     ArticleTitleView(section: section)
                 case .image:
                     ArticleImageView(section: section)
+                        .listRowInsets(EdgeInsets())
                 case .subHeader:
                     ArticleSubHeaderView(section: section)
                 case .exerpt:
