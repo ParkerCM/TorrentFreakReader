@@ -20,7 +20,7 @@ struct ImageDetailPageView: View {
                     viewModel.loadUrl(urlString: articleSection.content)
                 }
         }
-        .navigationTitle("Image")
+        .navigationTitle("Image Viewer")
     }
 }
 

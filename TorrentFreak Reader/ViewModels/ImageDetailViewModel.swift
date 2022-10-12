@@ -18,7 +18,9 @@ class ImageDetailViewModel: ObservableObject {
     
     func loadUrl(urlString: String) {
         if let url = URL(string: urlString) {
-            webView.load(URLRequest(url: url))
+            DispatchQueue.main.async {
+                self.webView.load(URLRequest(url: url))
+            }
         }
     }
     
