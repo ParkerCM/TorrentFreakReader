@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct LeadingArticleView: View {
     
@@ -16,35 +17,36 @@ struct LeadingArticleView: View {
     let usePlaceHolderImage: Bool
     
     var body: some View {
-        AsyncImage(url: URL(string: imageUrl)) { image in 
-            image.opacity(0.5)
-                .frame(width: 375, height: 225)
-                .cornerRadius(15)
-                .overlay {
-                    Text(title)
-                        .foregroundColor(.white)
-                        .font(.title)
-                        .padding(.leading, 5)
-                        .padding(.trailing, 5)
+        WebImage(url: URL(string: imageUrl))
+            .resizable()
+            .placeholder {
+                if usePlaceHolderImage {
+                    Image("placeholder_image")
+                        .frame(width: 375, height: 225)
+                        .cornerRadius(15)
+                        .overlay {
+                            Text(title)
+                                .foregroundColor(.white)
+                                .font(.title)
+                                .padding(.leading, 5)
+                                .padding(.trailing, 5)
+                        }
+                } else {
+                    ProgressView()
                 }
-        } placeholder: {
-            if usePlaceHolderImage {
-                Image("placeholder_image")
-                    .opacity(0.5)
-                    .frame(width: 375, height: 225)
-                    .cornerRadius(15)
-                    .overlay {
-                        Text(title)
-                            .foregroundColor(.white)
-                            .font(.title)
-                            .padding(.leading, 5)
-                            .padding(.trailing, 5)
-                    }
-            } else {
-                ProgressView()
             }
-        }
-        .frame(width: 375, height: 225)
+            .scaledToFill()
+            .frame(width: 375, height: 225)
+            .overlay(Color.black.opacity(usePlaceHolderImage ? 0.0 : 0.6))
+            .cornerRadius(15)
+            .overlay {
+                Text(title)
+                    .foregroundColor(.white)
+                    .font(.title)
+                    .padding(.leading, 5)
+                    .padding(.trailing, 5)
+            }
+            .frame(width: 375, height: 225)
     }
 }
 

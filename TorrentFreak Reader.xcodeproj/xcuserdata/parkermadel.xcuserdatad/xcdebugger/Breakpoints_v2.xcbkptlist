@@ -55,15 +55,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CCCD2AB8-B823-46C4-AFC1-7EB2D44F9880"
+            uuid = "7605346E-4304-4D41-A424-FBB36C0EFDD8"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TorrentFreak Reader/Service/ArticleSectionService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "getMainArticleSections(article:document:)"
             landmarkType = "7">
          </BreakpointContent>

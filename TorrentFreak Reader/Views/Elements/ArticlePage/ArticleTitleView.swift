@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ArticleTitleView: View {
     
@@ -15,19 +16,21 @@ struct ArticleTitleView: View {
         VStack (spacing: 15) {
             Text(section.article.title)
                 .font(.largeTitle)
+                .foregroundColor(.white)
                 .bold()
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .frame(minHeight: 300)
                 .padding(.trailing, 35)
                 .background(
-                    AsyncImage(url: URL(string: section.article.imageUrl)) { image in
-                        image.resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .opacity(0.5)
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                } placeholder: {
-                    ProgressView()
-                })
+                    WebImage(url: URL(string: section.article.imageUrl))
+                        .resizable()
+                        .placeholder {
+                            ProgressView()
+                        }
+                        .aspectRatio(contentMode: .fill)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .overlay(Color.black.opacity(0.6))
+                )
             
             HStack {
                 Image(systemName: "line.3.horizontal.decrease")

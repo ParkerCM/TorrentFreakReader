@@ -35,6 +35,10 @@
 		80D2877828E3BCC1006A8013 /* TorrentFreak_ReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2877728E3BCC1006A8013 /* TorrentFreak_ReaderUITests.swift */; };
 		80D2877A28E3BCC1006A8013 /* TorrentFreak_ReaderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2877928E3BCC1006A8013 /* TorrentFreak_ReaderUITestsLaunchTests.swift */; };
 		80D2878C28E3CA38006A8013 /* LeadingArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2878B28E3CA38006A8013 /* LeadingArticleView.swift */; };
+		80DF921828F7362800AA847A /* ArticleTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DF921728F7362800AA847A /* ArticleTableView.swift */; };
+		80DF921A28F7438B00AA847A /* ArticleImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DF921928F7438B00AA847A /* ArticleImageDetailView.swift */; };
+		80DF921C28F7472D00AA847A /* ImageDetailPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DF921B28F7472D00AA847A /* ImageDetailPageView.swift */; };
+		80DF921E28F7473F00AA847A /* ImageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DF921D28F7473F00AA847A /* ImageDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +88,10 @@
 		80D2877728E3BCC1006A8013 /* TorrentFreak_ReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentFreak_ReaderUITests.swift; sourceTree = "<group>"; };
 		80D2877928E3BCC1006A8013 /* TorrentFreak_ReaderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentFreak_ReaderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		80D2878B28E3CA38006A8013 /* LeadingArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingArticleView.swift; sourceTree = "<group>"; };
+		80DF921728F7362800AA847A /* ArticleTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableView.swift; sourceTree = "<group>"; };
+		80DF921928F7438B00AA847A /* ArticleImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleImageDetailView.swift; sourceTree = "<group>"; };
+		80DF921B28F7472D00AA847A /* ImageDetailPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailPageView.swift; sourceTree = "<group>"; };
+		80DF921D28F7473F00AA847A /* ImageDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +126,7 @@
 			children = (
 				801C019028E5113800F9D6C7 /* HomeViewModel.swift */,
 				80A8780F28EA2641009BB6BF /* ArticleViewModel.swift */,
+				80DF921D28F7473F00AA847A /* ImageDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -157,6 +166,8 @@
 				80A8781B28EA3F16009BB6BF /* ArticleContentView.swift */,
 				80A8781D28EA3F3E009BB6BF /* ArticleSubHeaderView.swift */,
 				80A8781F28EA44DF009BB6BF /* ArticleImageView.swift */,
+				80DF921728F7362800AA847A /* ArticleTableView.swift */,
+				80DF921928F7438B00AA847A /* ArticleImageDetailView.swift */,
 			);
 			path = ArticlePage;
 			sourceTree = "<group>";
@@ -244,6 +255,7 @@
 			children = (
 				80D2875E28E3BCBF006A8013 /* HomePageView.swift */,
 				80A8780628EA0240009BB6BF /* ArticlePageView.swift */,
+				80DF921B28F7472D00AA847A /* ImageDetailPageView.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -408,16 +420,20 @@
 			files = (
 				80A8781228EA2AD9009BB6BF /* ArticleSectionService.swift in Sources */,
 				80D2875F28E3BCBF006A8013 /* HomePageView.swift in Sources */,
+				80DF921A28F7438B00AA847A /* ArticleImageDetailView.swift in Sources */,
 				80BC23D328EBB0BF002C81C2 /* PlaceHolderData.swift in Sources */,
 				801C019428E514E300F9D6C7 /* TorrentFreakClient.swift in Sources */,
 				80A8780E28EA233A009BB6BF /* ArticleSection.swift in Sources */,
 				80A8781028EA2641009BB6BF /* ArticleViewModel.swift in Sources */,
 				80D2878C28E3CA38006A8013 /* LeadingArticleView.swift in Sources */,
 				80A8780528E9FD01009BB6BF /* LoadMoreView.swift in Sources */,
+				80DF921828F7362800AA847A /* ArticleTableView.swift in Sources */,
+				80DF921C28F7472D00AA847A /* ImageDetailPageView.swift in Sources */,
 				80A8781E28EA3F3E009BB6BF /* ArticleSubHeaderView.swift in Sources */,
 				801C018F28E50F3F00F9D6C7 /* Article.swift in Sources */,
 				80A8780728EA0240009BB6BF /* ArticlePageView.swift in Sources */,
 				80D2875D28E3BCBF006A8013 /* TorrentFreakReaderApp.swift in Sources */,
+				80DF921E28F7473F00AA847A /* ImageDetailViewModel.swift in Sources */,
 				80A8782028EA44DF009BB6BF /* ArticleImageView.swift in Sources */,
 				801C019728E5220400F9D6C7 /* ArticleService.swift in Sources */,
 				801C018928E505B900F9D6C7 /* ArticleView.swift in Sources */,

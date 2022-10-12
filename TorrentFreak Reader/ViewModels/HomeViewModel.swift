@@ -11,9 +11,7 @@ import Foundation
 class HomeViewModel: ObservableObject {
     
     @Published var articles: [Article] = PlaceHolderData.articles
-    
-    @Published var hideLoadMore = true
-    
+        
     @Published var isGettingNextPage = false
     
     @Published var isPlaceHolder = true
@@ -33,7 +31,6 @@ class HomeViewModel: ObservableObject {
             }
             
             self.isGettingNextPage = false
-            self.hideLoadMore = false
         }
     }
     

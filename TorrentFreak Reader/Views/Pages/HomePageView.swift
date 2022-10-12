@@ -35,7 +35,7 @@ struct HomePageView: View {
                     .onTapGesture {
                         getArticles()
                     }
-                    .hidden(viewModel.hideLoadMore)
+                    .hidden(viewModel.isPlaceHolder)
             }
             .navigationTitle("Home")
             .listStyle(PlainListStyle())

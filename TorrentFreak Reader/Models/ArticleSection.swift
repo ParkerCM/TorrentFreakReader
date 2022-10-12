@@ -17,4 +17,6 @@ struct ArticleSection: Hashable {
     
     var sectionType: ArticleSectionType
     
+    var tableData: [[String]]?
+    
 }

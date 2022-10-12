@@ -21,6 +21,8 @@ struct ArticlePageView: View {
                     ArticleTitleView(section: section)
                 case .image:
                     ArticleImageView(section: section)
+                        .background(NavigationLink("", destination: ImageDetailPageView(articleSection: section))
+                            .opacity(0.0))
                         .listRowInsets(EdgeInsets())
                 case .subHeader:
                     ArticleSubHeaderView(section: section)
@@ -28,6 +30,8 @@ struct ArticlePageView: View {
                     ArticleExcerptView(section: section)
                 case .content:
                     ArticleContentView(section: section)
+                case .table:
+                    ProgressView()
                 }
             }
             .listRowSeparator(.hidden)

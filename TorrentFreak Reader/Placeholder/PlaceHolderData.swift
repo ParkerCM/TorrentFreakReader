@@ -65,4 +65,6 @@ class PlaceHolderData {
                 category: "Lawsuits",
                 date: "today",
                 isLeading: false)]
+    
+    public static let section = ArticleSection(article: articles[1], content: "https://torrentfreak.com/images/russia-kremlin.jpg", categories: ["Lawsuits"], sectionType: .image)
 }
