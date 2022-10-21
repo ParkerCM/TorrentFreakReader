@@ -37,7 +37,7 @@ struct ArticlePageView: View {
             .listRowSeparator(.hidden)
         }
         .listStyle(PlainListStyle())
-        .navigationBarTitle("TorrentFreak", displayMode: .inline)
+        .navigationBarTitle("Article", displayMode: .inline)
         .onAppear {
             viewModel.fetchArticleSections(article: article)
         }

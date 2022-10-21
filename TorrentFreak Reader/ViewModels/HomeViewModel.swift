@@ -34,10 +34,8 @@ class HomeViewModel: ObservableObject {
         }
     }
     
-    func fetchRefreshedArticles() {
-        Task.init {
-            self.articles = await service.getArticles(page: 1)
-        }
+    func fetchRefreshedArticles() async {
+        self.articles = await service.getArticles(page: 1)
     }
     
 }

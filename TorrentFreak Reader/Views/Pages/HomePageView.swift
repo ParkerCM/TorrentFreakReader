@@ -20,11 +20,13 @@ struct HomePageView: View {
                     if article.isLeading {
                         LeadingArticleView(title: article.title, imageUrl: article.imageUrl, usePlaceHolderImage: viewModel.isPlaceHolder)
                             .background(NavigationLink("", destination: ArticlePageView(article: article))
+                                .disabled(viewModel.isPlaceHolder)
                                 .opacity(0.0))
                     } else {
                         NavigationLink(destination: ArticlePageView(article: article)) {
                             ArticleView(article: article, usePlaceHolderImage: viewModel.isPlaceHolder)
                         }
+                        .disabled(viewModel.isPlaceHolder)
                     }
                 }
                 .listRowSeparator(.hidden)
@@ -42,7 +44,7 @@ struct HomePageView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .refreshable {
-            viewModel.fetchRefreshedArticles()
+            await viewModel.fetchRefreshedArticles()
         }
         .onAppear {
             getArticles()
