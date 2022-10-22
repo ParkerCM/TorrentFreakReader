@@ -13,6 +13,8 @@ struct HomePageView: View {
     
     @State private var page = 1
     
+    private let haptic = UIImpactFeedbackGenerator(style: .rigid)
+    
     var body: some View {
         NavigationView {
             List {
@@ -47,6 +49,8 @@ struct HomePageView: View {
             self.page = 1
             await viewModel.fetchRefreshedArticles()
             self.page += 1
+            
+            haptic.impactOccurred()
         }
         .onAppear {
             getArticles()
@@ -54,6 +58,7 @@ struct HomePageView: View {
     }
     
     private func getArticles() {
+        haptic.impactOccurred()
         viewModel.fetchNewArticles(page: page)
         self.page += 1
     }

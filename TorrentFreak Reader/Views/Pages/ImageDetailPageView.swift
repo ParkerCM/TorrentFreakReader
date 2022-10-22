@@ -13,6 +13,8 @@ struct ImageDetailPageView: View {
     
     let articleSection: ArticleSection
     
+    private let haptic = UIImpactFeedbackGenerator(style: .rigid)
+    
     var body: some View {
         VStack {
             ArticleImageDetailView(webView: viewModel.webView)
@@ -21,6 +23,9 @@ struct ImageDetailPageView: View {
                 }
         }
         .navigationTitle("Image")
+        .onAppear {
+            haptic.impactOccurred()
+        }
     }
 }
 

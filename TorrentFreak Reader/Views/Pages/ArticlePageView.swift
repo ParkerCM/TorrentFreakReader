@@ -13,6 +13,8 @@ struct ArticlePageView: View {
     
     let article: Article
     
+    private let haptic = UIImpactFeedbackGenerator(style: .rigid)
+    
     var body: some View {
         List {
             ForEach(viewModel.articleSections, id: \.self) { section in
@@ -47,9 +49,11 @@ struct ArticlePageView: View {
         .navigationBarTitle("Article", displayMode: .inline)
         .onAppear {
             viewModel.fetchArticleSections(article: article)
+            haptic.impactOccurred()
         }
         .refreshable {
             viewModel.fetchArticleSections(article: article)
+            haptic.impactOccurred()
         }
     }
 }
