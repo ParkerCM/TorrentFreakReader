@@ -50,14 +50,16 @@ struct ArticleTitleView: View {
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             
-            if !section.categories.isEmpty {
-                HStack {
-                    ForEach(section.categories, id: \.self) { category in
-                        CategoryView(category: category)
-                            .frame(alignment: .leading)
+            if let categories = section.categories {
+                if !categories.isEmpty {
+                    HStack {
+                        ForEach(categories, id: \.self) { category in
+                            CategoryView(category: category)
+                                .frame(alignment: .leading)
+                        }
                     }
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 }
-                .frame(maxWidth: .infinity, alignment: .leading)
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)

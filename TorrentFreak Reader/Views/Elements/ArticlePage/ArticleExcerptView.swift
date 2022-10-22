@@ -12,7 +12,7 @@ struct ArticleExcerptView: View {
     let section: ArticleSection
     
     var body: some View {
-        Text(section.content)
+        Text(.init(section.content))
             .italic()
             .fontWeight(.medium)
             .frame(maxWidth: .infinity, alignment: .leading)

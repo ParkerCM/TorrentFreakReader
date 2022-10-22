@@ -73,7 +73,7 @@ class ArticleService {
         for i in (1...TOTAL_ARTICLES) {
             if i == 3 { continue }
             
-            let title = document.xpath("//div[\(i)]/article//h3").first?.stringValue.replacingOccurrences(of: "â", with: "-") ?? ""
+            let title = document.xpath("//div[\(i)]/article//h3").first?.stringValue ?? ""
             let author = document.xpath("//div[\(i)]/article//span").first?.stringValue ?? ""
             let category = document.xpath("//div[\(i)]/article//header//p").first?.stringValue ?? "Opinion Article"
             let imageUrl = document.xpath("//div[\(i)]/article//header//img").first?["src"] ?? ""

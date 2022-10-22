@@ -12,6 +12,7 @@ enum ArticleSectionType {
     case image
     case subHeader
     case exerpt
+    case ending
     case content
     case table
 }

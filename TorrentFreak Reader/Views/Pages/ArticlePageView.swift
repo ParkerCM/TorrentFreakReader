@@ -26,6 +26,8 @@ struct ArticlePageView: View {
                         .listRowInsets(EdgeInsets())
                 case .subHeader:
                     ArticleSubHeaderView(section: section)
+                case .ending:
+                    ArticleExcerptView(section: section)
                 case .exerpt:
                     ArticleExcerptView(section: section)
                 case .content:

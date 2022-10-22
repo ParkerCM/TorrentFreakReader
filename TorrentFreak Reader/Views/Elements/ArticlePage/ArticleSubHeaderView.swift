@@ -12,7 +12,7 @@ struct ArticleSubHeaderView: View {
     let section: ArticleSection
     
     var body: some View {
-        Text(section.content)
+        Text(.init(section.content))
             .font(.title2)
             .bold()
             .frame(maxWidth: .infinity, alignment: .leading)

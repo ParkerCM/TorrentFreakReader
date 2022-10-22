@@ -43,7 +43,7 @@ class TorrentFreakClient {
         print("URL is \(url)")
         
         do {
-            let htmlString = try String(contentsOf: url, encoding: .ascii)
+            let htmlString = try String(contentsOf: url, encoding: .utf8)
             
             return htmlString
         } catch {

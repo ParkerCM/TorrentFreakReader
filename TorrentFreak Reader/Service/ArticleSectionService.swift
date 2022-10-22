@@ -41,7 +41,7 @@ class ArticleSectionService {
     private func getArticleExerpt(article: Article, document: HTMLDocument) -> ArticleSection {
         let exerpt = document.xpath("//article/header/p[2]").first?.stringValue ?? ""
         
-        return ArticleSection(article: article, content: exerpt.replacingOccurrences(of: "\n", with: "").trimmingCharacters(in: .whitespacesAndNewlines), categories: getCategories(document: document), sectionType: .exerpt)
+        return ArticleSection(article: article, content: exerpt.trimmingCharacters(in: .whitespacesAndNewlines), sectionType: .exerpt)
     }
     
     private func getMainArticleSections(article: Article, document: HTMLDocument) -> [ArticleSection] {
@@ -53,18 +53,23 @@ class ArticleSectionService {
                 switch tag {
                 case "p":
                     if !part.stringValue.isEmpty {
-                        sections.append(ArticleSection(article: article, content: part.stringValue, categories: getCategories(document: document),sectionType: .content))
+                        // if it's the last paragraph and has the em tag as a child then it's likely an ending paragraph and should be processed as such
+                        if part == parts[parts.endIndex - 1] && part.children.first?.tag == "em" {
+                            sections.append(ArticleSection(article: article, content: getParagraphContent(part: part.children.first!) ,sectionType: .ending))
+                        } else {
+                            sections.append(ArticleSection(article: article, content: getParagraphContent(part: part), sectionType: .content))
+                        }
                     }
                 case "h2":
-                    sections.append(ArticleSection(article: article, content: part.stringValue, categories: getCategories(document: document),sectionType: .subHeader))
+                    sections.append(ArticleSection(article: article, content: part.stringValue, sectionType: .subHeader))
                 case "a":
                     fallthrough
                 case "img":
                     if let imageLink = part[tag == "img" ? "src" : "href"] {
-                        sections.append(ArticleSection(article: article, content: imageLink, categories: getCategories(document: document),sectionType: .image))
+                        sections.append(ArticleSection(article: article, content: imageLink, sectionType: .image))
                     }
                 case "table":
-                    sections.append(ArticleSection(article: article, content: "", categories: getCategories(document: document), sectionType: .table, tableData: getTableData(document: document)))
+                    sections.append(ArticleSection(article: article, content: "", sectionType: .table, tableData: getTableData(document: document)))
                 default:
                     print("Hit the default case")
                 }
@@ -72,6 +77,29 @@ class ArticleSectionService {
         }
         
         return sections
+    }
+    
+    private func getParagraphContent(part: XMLElement) -> String {
+        var contentXml = part.rawXML
+        
+        if !part.children.isEmpty {
+            for child in part.children {
+                if child.tag == "a" {
+                    if let link = child["href"] {
+                        contentXml = contentXml.replacingOccurrences(of: child.rawXML, with: "[\(child.stringValue)](\(link))")
+                    }
+                }
+            }
+        }
+        
+        do {
+            let xml = try XMLDocument(string: contentXml, encoding: .utf8)
+            
+            return xml.root!.stringValue.trimmingCharacters(in: .whitespacesAndNewlines)
+        } catch {
+            print("Error getting paragraph content")
+            return "Error getting section"
+        }
     }
     
     private func getCategories(document: HTMLDocument) -> [String] {
