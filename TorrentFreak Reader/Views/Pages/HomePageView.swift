@@ -44,7 +44,9 @@ struct HomePageView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .refreshable {
+            self.page = 1
             await viewModel.fetchRefreshedArticles()
+            self.page += 1
         }
         .onAppear {
             getArticles()

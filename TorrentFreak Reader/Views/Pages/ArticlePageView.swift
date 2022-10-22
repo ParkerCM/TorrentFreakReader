@@ -33,7 +33,12 @@ struct ArticlePageView: View {
                 case .content:
                     ArticleContentView(section: section)
                 case .table:
-                    ProgressView()
+                    ArticleTableView(section: section)
+                        .listRowInsets(EdgeInsets())
+                case .video:
+                    ArticleVideoView(section: section)
+                        .cornerRadius(15)
+                        .frame(height: 225)
                 }
             }
             .listRowSeparator(.hidden)

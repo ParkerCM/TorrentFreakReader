@@ -67,4 +67,8 @@ class PlaceHolderData {
                 isLeading: false)]
     
     public static let section = ArticleSection(article: articles[1], content: "https://torrentfreak.com/images/russia-kremlin.jpg", categories: ["Lawsuits"], sectionType: .image)
+    
+    public static let sectionTable = ArticleSection(article: articles[1], content: "https://torrentfreak.com/images/russia-kremlin.jpg", categories: ["Lawsuits"], sectionType: .image, tableData: articleTable)
+    
+    public static let articleTable = ArticleTable(headers: ["Movie Rank", "Rank Last Week", "Movie Name", "IMDB Rating / Trailer"], rows: [["1", "(1)", "Bullet Train", "7.4 / trailer"], ["1", "(1)", "Bullet Train", "7.4 / trailer"], ["1", "(1)", "Bullet Train", "7.4 / trailer"], ["1", "(1)", "Bullet Train", "7.4 / trailer"], ["1", "(1)", "Bullet Train", "7.4 / trailer"], ["1", "(1)", "Bullet Train", "7.4 / trailer"]])
 }

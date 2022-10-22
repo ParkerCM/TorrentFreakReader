@@ -9,16 +9,49 @@ import SwiftUI
 
 struct ArticleTableView: View {
     
-    var data: [[String]]
+    var section: ArticleSection
     
     var body: some View {
-        Text("fuck")
+        if let data = section.tableData {
+            VStack {
+                HStack {
+                    ForEach(data.headers.indices, id: \.self) { item in
+                        Text(data.headers[item])
+                            .multilineTextAlignment(.leading)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                        Divider()
+                    }
+                }
+                .background(.pink)
+                                
+                ForEach(data.rows, id: \.self) { row in
+                    HStack {
+                        ForEach(row.indices) { item in
+                            Text(row[item])
+                                .multilineTextAlignment(.leading)
+                                .padding(.leading, 5)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                            Divider()
+                        }
+                    }
+                    if row != data.rows.last {
+                        Divider()
+                    }
+                }
+                
+                HStack {
+                    Text("Most downloaded movies via torrent sites")
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                .background(.pink)
+            }
+            .cornerRadius(15)
+        }
     }
 }
 
 struct ArticleTableView_Previews: PreviewProvider {
     static var previews: some View {
-        let data = [[ "1", "2", "3", "4"]]
-        ArticleTableView(data: data)
+        ArticleTableView(section: PlaceHolderData.sectionTable)
     }
 }

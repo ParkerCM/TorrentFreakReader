@@ -14,6 +14,8 @@
 		801C019428E514E300F9D6C7 /* TorrentFreakClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801C019328E514E300F9D6C7 /* TorrentFreakClient.swift */; };
 		801C019728E5220400F9D6C7 /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801C019628E5220400F9D6C7 /* ArticleService.swift */; };
 		801C019A28E525A000F9D6C7 /* Fuzi in Frameworks */ = {isa = PBXBuildFile; productRef = 801C019928E525A000F9D6C7 /* Fuzi */; };
+		8023A0D629049ABA00F4FFDC /* ArticleVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8023A0D529049ABA00F4FFDC /* ArticleVideoView.swift */; };
+		805127F12903A1F70054F4D9 /* ArticleTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805127F02903A1F70054F4D9 /* ArticleTable.swift */; };
 		805424AB28F0FE99005F93D3 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 805424AA28F0FE99005F93D3 /* SDWebImageSwiftUI */; };
 		80A8780528E9FD01009BB6BF /* LoadMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A8780428E9FD01009BB6BF /* LoadMoreView.swift */; };
 		80A8780728EA0240009BB6BF /* ArticlePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A8780628EA0240009BB6BF /* ArticlePageView.swift */; };
@@ -65,6 +67,8 @@
 		801C019028E5113800F9D6C7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		801C019328E514E300F9D6C7 /* TorrentFreakClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentFreakClient.swift; sourceTree = "<group>"; };
 		801C019628E5220400F9D6C7 /* ArticleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
+		8023A0D529049ABA00F4FFDC /* ArticleVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleVideoView.swift; sourceTree = "<group>"; };
+		805127F02903A1F70054F4D9 /* ArticleTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTable.swift; sourceTree = "<group>"; };
 		80A8780428E9FD01009BB6BF /* LoadMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreView.swift; sourceTree = "<group>"; };
 		80A8780628EA0240009BB6BF /* ArticlePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlePageView.swift; sourceTree = "<group>"; };
 		80A8780928EA183B009BB6BF /* ArticleTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTitleView.swift; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 				801C018E28E50F3F00F9D6C7 /* Article.swift */,
 				80A8780D28EA233A009BB6BF /* ArticleSection.swift */,
 				80A8780B28EA22D9009BB6BF /* ArticleSectionType.swift */,
+				805127F02903A1F70054F4D9 /* ArticleTable.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 				80A8781F28EA44DF009BB6BF /* ArticleImageView.swift */,
 				80DF921728F7362800AA847A /* ArticleTableView.swift */,
 				80DF921928F7438B00AA847A /* ArticleImageDetailView.swift */,
+				8023A0D529049ABA00F4FFDC /* ArticleVideoView.swift */,
 			);
 			path = ArticlePage;
 			sourceTree = "<group>";
@@ -419,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80A8781228EA2AD9009BB6BF /* ArticleSectionService.swift in Sources */,
+				8023A0D629049ABA00F4FFDC /* ArticleVideoView.swift in Sources */,
 				80D2875F28E3BCBF006A8013 /* HomePageView.swift in Sources */,
 				80DF921A28F7438B00AA847A /* ArticleImageDetailView.swift in Sources */,
 				80BC23D328EBB0BF002C81C2 /* PlaceHolderData.swift in Sources */,
@@ -433,6 +440,7 @@
 				801C018F28E50F3F00F9D6C7 /* Article.swift in Sources */,
 				80A8780728EA0240009BB6BF /* ArticlePageView.swift in Sources */,
 				80D2875D28E3BCBF006A8013 /* TorrentFreakReaderApp.swift in Sources */,
+				805127F12903A1F70054F4D9 /* ArticleTable.swift in Sources */,
 				80DF921E28F7473F00AA847A /* ImageDetailViewModel.swift in Sources */,
 				80A8782028EA44DF009BB6BF /* ArticleImageView.swift in Sources */,
 				801C019728E5220400F9D6C7 /* ArticleService.swift in Sources */,

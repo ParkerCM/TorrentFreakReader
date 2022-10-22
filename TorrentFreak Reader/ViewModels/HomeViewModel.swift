@@ -27,7 +27,7 @@ class HomeViewModel: ObservableObject {
                 self.articles = articles
                 self.isPlaceHolder = false
             } else {
-                self.articles.append(contentsOf: await service.getArticles(page: page))
+                self.articles.append(contentsOf: articles)
             }
             
             self.isGettingNextPage = false

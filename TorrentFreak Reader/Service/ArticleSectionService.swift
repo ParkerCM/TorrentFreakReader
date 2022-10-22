@@ -45,7 +45,7 @@ class ArticleSectionService {
     }
     
     private func getMainArticleSections(article: Article, document: HTMLDocument) -> [ArticleSection] {
-        let parts = document.xpath("//article/div/p|//article/div/h2|//article/div/center/a|//article/div/center/img|//article/div/p/img|//article/div/p/a/img|//article/div/table")
+        let parts = document.xpath("//article/div/p|//article/div/h2|//article/div/center/a|//article/div/center/img|//article/div/p/img|//article/div/p/a/img|//article/div/table|//article/div/div/iframe")
         var sections: [ArticleSection] = []
         
         for part in parts {
@@ -69,7 +69,11 @@ class ArticleSectionService {
                         sections.append(ArticleSection(article: article, content: imageLink, sectionType: .image))
                     }
                 case "table":
-                    sections.append(ArticleSection(article: article, content: "", sectionType: .table, tableData: getTableData(document: document)))
+                    sections.append(ArticleSection(article: article, content: "", sectionType: .table, tableData: getTableData(document: part)))
+                case "iframe":
+                    if let videoLink = part["src"] {
+                        sections.append(ArticleSection(article: article, content: videoLink, sectionType: .video))
+                    }
                 default:
                     print("Hit the default case")
                 }
@@ -115,22 +119,25 @@ class ArticleSectionService {
         return categoryArray
     }
     
-    private func getTableData(document: HTMLDocument) -> [[String]] {
-        var rows = [[String]]()
+    private func getTableData(document: XMLElement) -> ArticleTable {
+        let headerRow = document.xpath("//thead/tr")
+        let rows = document.xpath("//table/tr")
         
-        let headerRow = document.xpath("//article/div/table//th")
+        let header = getRow(element: headerRow.first!)
+        var body: [[String]] = [[String]]()
         
-        rows.append(getRow(nodeSet: headerRow))
+        for row in rows {
+            body.append(getRow(element: row))
+        }
         
-        return rows
+        return ArticleTable(headers: header, rows: body)
     }
     
-    private func getRow(nodeSet: NodeSet) -> [String] {
+    private func getRow(element: XMLElement) -> [String] {
         var row = [String]()
         
-        for node in nodeSet {
-            row.append(node.stringValue)
-            print("\(node.stringValue)")
+        for el in element.children {
+            row.append(el.stringValue)
         }
         
         return row

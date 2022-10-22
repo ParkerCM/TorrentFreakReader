@@ -15,4 +15,5 @@ enum ArticleSectionType {
     case ending
     case content
     case table
+    case video
 }
