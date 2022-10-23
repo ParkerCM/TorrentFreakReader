@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UniformTypeIdentifiers
 
 struct HomePageView: View {
     
@@ -15,18 +16,60 @@ struct HomePageView: View {
     
     private let haptic = UIImpactFeedbackGenerator(style: .rigid)
     
+    @Environment(\.openURL) var openURL
+    
     var body: some View {
         NavigationView {
             List {
                 ForEach(viewModel.articles, id: \.self) { article in
                     if article.isLeading {
                         LeadingArticleView(title: article.title, imageUrl: article.imageUrl, usePlaceHolderImage: viewModel.isPlaceHolder)
+                            .contextMenu(menuItems: {
+                                Button {
+                                    UIPasteboard.general.setValue(article.articleUrl,
+                                                                  forPasteboardType: UTType.plainText.identifier)
+                                } label: {
+                                    Label("Copy link", systemImage: "doc.on.doc")
+                                }
+                                
+                                ShareLink(item: URL(string: article.articleUrl)!) {
+                                    Label("Share", systemImage: "square.and.arrow.up")
+                                }
+                                
+                                Button {
+                                    openURL(URL(string: article.articleUrl)!)
+                                } label: {
+                                    Label("Open in browser", systemImage: "link")
+                                }
+                            }, preview: {
+                                ArticlePageView(article: article)
+                            })
                             .background(NavigationLink("", destination: ArticlePageView(article: article))
                                 .disabled(viewModel.isPlaceHolder)
                                 .opacity(0.0))
                     } else {
                         NavigationLink(destination: ArticlePageView(article: article)) {
                             ArticleView(article: article, usePlaceHolderImage: viewModel.isPlaceHolder)
+                                .contextMenu(menuItems: {
+                                    Button {
+                                        UIPasteboard.general.setValue(article.articleUrl,
+                                                                      forPasteboardType: UTType.plainText.identifier)
+                                    } label: {
+                                        Label("Copy link", systemImage: "doc.on.doc")
+                                    }
+                                    
+                                    ShareLink(item: URL(string: article.articleUrl)!) {
+                                        Label("Share", systemImage: "square.and.arrow.up")
+                                    }
+                                    
+                                    Button {
+                                        openURL(URL(string: article.articleUrl)!)
+                                    } label: {
+                                        Label("Open in browser", systemImage: "link")
+                                    }
+                                }, preview: {
+                                    ArticlePageView(article: article)
+                                })
                         }
                         .disabled(viewModel.isPlaceHolder)
                     }

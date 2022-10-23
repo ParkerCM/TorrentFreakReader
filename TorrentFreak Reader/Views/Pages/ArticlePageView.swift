@@ -21,6 +21,7 @@ struct ArticlePageView: View {
                 switch section.sectionType {
                 case .title:
                     ArticleTitleView(section: section)
+                        .listRowInsets(EdgeInsets())
                 case .image:
                     ArticleImageView(section: section)
                         .background(NavigationLink("", destination: ImageDetailPageView(articleSection: section))
