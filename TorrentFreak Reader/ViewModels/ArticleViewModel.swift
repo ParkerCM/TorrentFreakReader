@@ -12,7 +12,7 @@ class ArticleViewModel: ObservableObject {
     
     @Published var articleSections: [ArticleSection] = []
     
-    private let sectionService = ArticleSectionService()
+    private let sectionService = ArticleSectionService.shared
     
     func fetchArticleSections(article: Article) {
         Task.init {

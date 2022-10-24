@@ -10,9 +10,22 @@ import Fuzi
 
 class ArticleSectionService {
     
+    public static let shared = ArticleSectionService()
+    
     private let client = TorrentFreakClient.shared
     
+    private var cachedSections = [Int : [ArticleSection]]()
+    
+    private init() { }
+    
     func getSections(article: Article) async -> [ArticleSection] {
+        // get sections from cache if they exist there
+        if let cache = cachedSections[article.hashValue] {
+            print("Got cached sections for id \(article.hashValue)")
+            return cache
+        }
+        
+        // get sections via network call
         let html = await client.sendArticleRequest(url: article.articleUrl)
         
         return getAllSections(article: article, html: html)
@@ -29,9 +42,13 @@ class ArticleSectionService {
                 articleSections.append(getArticleExerpt(article: article, document: document))
                 articleSections.append(contentsOf: getMainArticleSections(article: article, document: document))
                 
+                if !articleSections.isEmpty {
+                    cachedSections[article.hashValue] = articleSections
+                }
+                
                 return articleSections
             } catch {
-                print("Error getting all article sections")
+                print("Error getting all article sections: \(error)")
             }
         }
         
