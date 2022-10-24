@@ -28,6 +28,7 @@
 		80A8781C28EA3F16009BB6BF /* ArticleContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A8781B28EA3F16009BB6BF /* ArticleContentView.swift */; };
 		80A8781E28EA3F3E009BB6BF /* ArticleSubHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A8781D28EA3F3E009BB6BF /* ArticleSubHeaderView.swift */; };
 		80A8782028EA44DF009BB6BF /* ArticleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A8781F28EA44DF009BB6BF /* ArticleImageView.swift */; };
+		80BC03B729070F8100B1164D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BC03B629070F8100B1164D /* Category.swift */; };
 		80BC23D328EBB0BF002C81C2 /* PlaceHolderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BC23D228EBB0BF002C81C2 /* PlaceHolderData.swift */; };
 		80D2875D28E3BCBF006A8013 /* TorrentFreakReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2875C28E3BCBF006A8013 /* TorrentFreakReaderApp.swift */; };
 		80D2875F28E3BCBF006A8013 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2875E28E3BCBF006A8013 /* HomePageView.swift */; };
@@ -80,6 +81,7 @@
 		80A8781B28EA3F16009BB6BF /* ArticleContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleContentView.swift; sourceTree = "<group>"; };
 		80A8781D28EA3F3E009BB6BF /* ArticleSubHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleSubHeaderView.swift; sourceTree = "<group>"; };
 		80A8781F28EA44DF009BB6BF /* ArticleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleImageView.swift; sourceTree = "<group>"; };
+		80BC03B629070F8100B1164D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		80BC23D228EBB0BF002C81C2 /* PlaceHolderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderData.swift; sourceTree = "<group>"; };
 		80D2875928E3BCBE006A8013 /* TorrentFreak Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TorrentFreak Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80D2875C28E3BCBF006A8013 /* TorrentFreakReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentFreakReaderApp.swift; sourceTree = "<group>"; };
@@ -138,9 +140,9 @@
 		801C018D28E50F1600F9D6C7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				80BC03B529070F4100B1164D /* Enum */,
 				801C018E28E50F3F00F9D6C7 /* Article.swift */,
 				80A8780D28EA233A009BB6BF /* ArticleSection.swift */,
-				80A8780B28EA22D9009BB6BF /* ArticleSectionType.swift */,
 				805127F02903A1F70054F4D9 /* ArticleTable.swift */,
 			);
 			path = Models;
@@ -176,6 +178,15 @@
 				8023A0D529049ABA00F4FFDC /* ArticleVideoView.swift */,
 			);
 			path = ArticlePage;
+			sourceTree = "<group>";
+		};
+		80BC03B529070F4100B1164D /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				80A8780B28EA22D9009BB6BF /* ArticleSectionType.swift */,
+				80BC03B629070F8100B1164D /* Category.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 		80BC23D128EBB0AD002C81C2 /* Placeholder */ = {
@@ -451,6 +462,7 @@
 				80A8781C28EA3F16009BB6BF /* ArticleContentView.swift in Sources */,
 				801C019128E5113800F9D6C7 /* HomeViewModel.swift in Sources */,
 				80A8780C28EA22D9009BB6BF /* ArticleSectionType.swift in Sources */,
+				80BC03B729070F8100B1164D /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
