@@ -25,22 +25,7 @@ struct HomePageView: View {
                     if article.isLeading {
                         LeadingArticleView(title: article.title, imageUrl: article.imageUrl, usePlaceHolderImage: viewModel.isPlaceHolder)
                             .contextMenu(menuItems: {
-                                Button {
-                                    UIPasteboard.general.setValue(article.articleUrl,
-                                                                  forPasteboardType: UTType.plainText.identifier)
-                                } label: {
-                                    Label("Copy link", systemImage: "doc.on.doc")
-                                }
-                                
-                                ShareLink(item: URL(string: article.articleUrl)!) {
-                                    Label("Share", systemImage: "square.and.arrow.up")
-                                }
-                                
-                                Button {
-                                    openURL(URL(string: article.articleUrl)!)
-                                } label: {
-                                    Label("Open in browser", systemImage: "link")
-                                }
+                                HomeContextMenuView(article: article)
                             }, preview: {
                                 ArticlePageView(article: article)
                             })
@@ -51,22 +36,7 @@ struct HomePageView: View {
                         NavigationLink(destination: ArticlePageView(article: article)) {
                             ArticleView(article: article, usePlaceHolderImage: viewModel.isPlaceHolder)
                                 .contextMenu(menuItems: {
-                                    Button {
-                                        UIPasteboard.general.setValue(article.articleUrl,
-                                                                      forPasteboardType: UTType.plainText.identifier)
-                                    } label: {
-                                        Label("Copy link", systemImage: "doc.on.doc")
-                                    }
-                                    
-                                    ShareLink(item: URL(string: article.articleUrl)!) {
-                                        Label("Share", systemImage: "square.and.arrow.up")
-                                    }
-                                    
-                                    Button {
-                                        openURL(URL(string: article.articleUrl)!)
-                                    } label: {
-                                        Label("Open in browser", systemImage: "link")
-                                    }
+                                    HomeContextMenuView(article: article)
                                 }, preview: {
                                     ArticlePageView(article: article)
                                 })
