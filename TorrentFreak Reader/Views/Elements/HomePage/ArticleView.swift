@@ -39,6 +39,12 @@ struct ArticleView: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .frame(height: 125)
+        .background(NavigationLink("", destination: ArticlePageView(article: article)))
+        .contextMenu(menuItems: {
+            HomeContextMenuView(article: article)
+        }, preview: {
+            ArticlePageView(article: article)
+        })
     }
 }
 

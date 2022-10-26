@@ -11,6 +11,8 @@ struct ArticlePageView: View {
     
     @StateObject var viewModel = ArticleViewModel()
     
+    @State private var initialLoad = true
+    
     let article: Article
     
     private let haptic = UIImpactFeedbackGenerator(style: .rigid)
@@ -49,8 +51,11 @@ struct ArticlePageView: View {
         .listStyle(PlainListStyle())
         .navigationBarTitle("Article", displayMode: .inline)
         .onAppear {
-            viewModel.fetchArticleSections(article: article)
-            haptic.impactOccurred()
+            if self.initialLoad {
+                viewModel.fetchArticleSections(article: article)
+                haptic.impactOccurred()
+                self.initialLoad = false
+            }
         }
         .refreshable {
             viewModel.fetchArticleSections(article: article)

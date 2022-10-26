@@ -11,7 +11,7 @@ import SwiftUI
 struct TorrentFreakReaderApp: App {
     var body: some Scene {
         WindowGroup {
-            HomePageView()
+            ContainerPageView()
         }
     }
 }

@@ -12,49 +12,34 @@ struct HomePageView: View {
     
     @StateObject private var viewModel = HomeViewModel()
     
+    @State private var initialLoad = true
+    
     @State private var page = 1
     
     private let haptic = UIImpactFeedbackGenerator(style: .rigid)
-    
-    @Environment(\.openURL) var openURL
-    
+        
     var body: some View {
         NavigationView {
             List {
                 ForEach(viewModel.articles, id: \.self) { article in
                     if article.isLeading {
-                        LeadingArticleView(title: article.title, imageUrl: article.imageUrl, usePlaceHolderImage: viewModel.isPlaceHolder)
-                            .contextMenu(menuItems: {
-                                HomeContextMenuView(article: article)
-                            }, preview: {
-                                ArticlePageView(article: article)
-                            })
-                            .background(NavigationLink("", destination: ArticlePageView(article: article))
-                                .disabled(viewModel.isPlaceHolder)
-                                .opacity(0.0))
+                        LeadingArticleView(article: article, usePlaceHolderImage: viewModel.isPlaceHolder)
+                            .disabled(viewModel.isPlaceHolder)
                     } else {
-                        NavigationLink(destination: ArticlePageView(article: article)) {
-                            ArticleView(article: article, usePlaceHolderImage: viewModel.isPlaceHolder)
-                                .contextMenu(menuItems: {
-                                    HomeContextMenuView(article: article)
-                                }, preview: {
-                                    ArticlePageView(article: article)
-                                })
-                        }
-                        .disabled(viewModel.isPlaceHolder)
+                        ArticleView(article: article, usePlaceHolderImage: viewModel.isPlaceHolder)
+                            .disabled(viewModel.isPlaceHolder)
                     }
                 }
                 .listRowSeparator(.hidden)
                 .redacted(when: viewModel.isPlaceHolder)
                 
                 LoadMoreView(isGettingNextPage: $viewModel.isGettingNextPage)
-                    .listRowSeparator(.hidden)
                     .onTapGesture {
                         getArticles()
                     }
                     .hidden(viewModel.isPlaceHolder)
             }
-            .navigationTitle("Home")
+            .navigationTitle("News")
             .listStyle(PlainListStyle())
         }
         .navigationViewStyle(StackNavigationViewStyle())
@@ -66,7 +51,10 @@ struct HomePageView: View {
             haptic.impactOccurred()
         }
         .onAppear {
-            getArticles()
+            if self.initialLoad {
+                getArticles()
+                self.initialLoad = false
+            }
         }
     }
     

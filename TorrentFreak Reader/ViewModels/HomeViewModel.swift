@@ -16,7 +16,7 @@ class HomeViewModel: ObservableObject {
     
     @Published var isPlaceHolder = true
     
-    private let service: ArticleService = ArticleService()
+    private let service: ArticleService = ArticleService.shared
     
     func fetchNewArticles(page: Int) {
         Task.init {

@@ -20,6 +20,7 @@ struct LoadMoreView: View {
             .bold()
             .frame(maxWidth: .infinity)
             .frame(height: 50)
+            .listRowSeparator(.hidden)
     }
     
 }

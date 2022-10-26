@@ -10,9 +10,13 @@ import Fuzi
 
 class ArticleService {
     
+    public static let shared = ArticleService()
+    
     private let client = TorrentFreakClient.shared
     
     private let TOTAL_ARTICLES = 9
+    
+    private init() { }
     
     func getArticles(page: Int) async -> [Article] {
         let html = await client.sendPageRequest(page: page)
@@ -26,8 +30,8 @@ class ArticleService {
                 let document = try HTMLDocument(string: html)
                 var articles: [Article] = []
                 
-                let leadArticle = parseLeadArticle(document: document, html: html)
-                let otherArticles = parseArticles(document: document, html: html)
+                let leadArticle = parseLeadArticle(document: document)
+                let otherArticles = parseArticles(document: document)
                 
                 if let leadArticle = leadArticle {
                     articles.append(leadArticle)
@@ -43,7 +47,7 @@ class ArticleService {
         return []
     }
     
-    private func parseLeadArticle(document: HTMLDocument, html: String) -> Article? {
+    private func parseLeadArticle(document: HTMLDocument) -> Article? {
         let title = document.xpath("//section//h1").first?.stringValue ?? ""
         let author = document.xpath("//section/a//footer/div").first?.stringValue ?? ""
         let imageUrl = document.xpath("//section/a").first?["style"] ?? ""
@@ -67,7 +71,7 @@ class ArticleService {
         return Article(title: title, author: getAuthorName(name: author), imageUrl: matches.first?.url?.absoluteString ?? "", articleUrl: articleUrl, category: "", date: date, isLeading: true)
     }
     
-    private func parseArticles(document: HTMLDocument, html: String) -> [Article] {
+    private func parseArticles(document: HTMLDocument) -> [Article] {
         var articles: [Article] = []
         
         for i in (1...TOTAL_ARTICLES) {
