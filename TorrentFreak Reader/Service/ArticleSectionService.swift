@@ -26,7 +26,7 @@ class ArticleSectionService {
         }
         
         // get sections via network call
-        let html = await client.sendArticleRequest(url: article.articleUrl)
+        let html = await client.sendRequest(url: URL(string: article.articleUrl)!)
         
         return getAllSections(article: article, html: html)
     }

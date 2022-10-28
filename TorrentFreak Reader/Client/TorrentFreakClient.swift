@@ -13,33 +13,7 @@ class TorrentFreakClient {
     
     private init() { }
     
-    func sendPageRequest(page: Int) async -> String {
-        var url: URL?
-        
-        if page == 0 {
-            url = URL(string: "https://www.torrentfreak.com")
-        } else {
-            url = URL(string: "https://www.torrentfreak.com/page/\(page)/")
-        }
-        
-        if let url = url {
-            return await sendRequest(url: url)
-        }
-        
-        return ""
-    }
-    
-    func sendArticleRequest(url: String) async -> String {
-        let url = URL(string: url)
-        
-        if let url = url {
-            return await sendRequest(url: url)
-        }
-        
-        return ""
-    }
-    
-    private func sendRequest(url: URL) async -> String {
+    func sendRequest(url: URL) async -> String {
         print("URL is \(url)")
         
         do {
@@ -47,7 +21,7 @@ class TorrentFreakClient {
             
             return htmlString
         } catch {
-            print("Error sending request to TF")
+            print("Error sending request to TF: \(error)")
             return ""
         }
     }

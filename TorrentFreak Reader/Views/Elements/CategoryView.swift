@@ -39,6 +39,8 @@ struct CategoryView: View {
             return .green
         case "Opinion Article":
             return .cyan
+        case "News":
+            return .red
         case "IPTV and Streaming":
             return.brown
         case "DMCA":

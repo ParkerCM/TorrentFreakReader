@@ -69,6 +69,11 @@ struct ArticlePageView: View {
                 Image(systemName: "link")
             }
         }
+        .overlay {
+            if viewModel.articleSections.isEmpty {
+                ProgressView()
+            }
+        }
     }
 }
 
