@@ -14,9 +14,21 @@ class ArticleViewModel: ObservableObject {
     
     private let sectionService = ArticleSectionService.shared
     
+    private let dataStore = ArticleDataStore.shared
+    
     func fetchArticleSections(article: Article) {
         Task.init {
             self.articleSections = await sectionService.getSections(article: article)
+        }
+    }
+    
+    func saveArticleToDataStore(article: Article) {
+        let successful = dataStore.insertArticle(article: article)
+        
+        if successful {
+            print("Success")
+        } else {
+            print("Failure")
         }
     }
     

@@ -44,7 +44,6 @@ struct LeadingArticleView: View {
                     .padding(.leading, 5)
                     .padding(.trailing, 5)
             }
-            .frame(width: 375, height: 225)
             .background(NavigationLink("", destination: ArticlePageView(article: article))
                 .opacity(0.0))
             .contextMenu(menuItems: {

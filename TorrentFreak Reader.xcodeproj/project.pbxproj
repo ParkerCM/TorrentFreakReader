@@ -43,6 +43,9 @@
 		80D2877828E3BCC1006A8013 /* TorrentFreak_ReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2877728E3BCC1006A8013 /* TorrentFreak_ReaderUITests.swift */; };
 		80D2877A28E3BCC1006A8013 /* TorrentFreak_ReaderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2877928E3BCC1006A8013 /* TorrentFreak_ReaderUITestsLaunchTests.swift */; };
 		80D2878C28E3CA38006A8013 /* LeadingArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2878B28E3CA38006A8013 /* LeadingArticleView.swift */; };
+		80D7AE882916C21B004EDCD9 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 80D7AE872916C21B004EDCD9 /* SQLite */; };
+		80D7AE8B2916C3E3004EDCD9 /* ArticleDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D7AE8A2916C3E3004EDCD9 /* ArticleDataStore.swift */; };
+		80D7AE8D2916CC62004EDCD9 /* SavedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D7AE8C2916CC62004EDCD9 /* SavedViewModel.swift */; };
 		80DF921828F7362800AA847A /* ArticleTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DF921728F7362800AA847A /* ArticleTableView.swift */; };
 		80DF921A28F7438B00AA847A /* ArticleImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DF921928F7438B00AA847A /* ArticleImageDetailView.swift */; };
 		80DF921C28F7472D00AA847A /* ImageDetailPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DF921B28F7472D00AA847A /* ImageDetailPageView.swift */; };
@@ -104,6 +107,8 @@
 		80D2877728E3BCC1006A8013 /* TorrentFreak_ReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentFreak_ReaderUITests.swift; sourceTree = "<group>"; };
 		80D2877928E3BCC1006A8013 /* TorrentFreak_ReaderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentFreak_ReaderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		80D2878B28E3CA38006A8013 /* LeadingArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingArticleView.swift; sourceTree = "<group>"; };
+		80D7AE8A2916C3E3004EDCD9 /* ArticleDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDataStore.swift; sourceTree = "<group>"; };
+		80D7AE8C2916CC62004EDCD9 /* SavedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewModel.swift; sourceTree = "<group>"; };
 		80DF921728F7362800AA847A /* ArticleTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableView.swift; sourceTree = "<group>"; };
 		80DF921928F7438B00AA847A /* ArticleImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleImageDetailView.swift; sourceTree = "<group>"; };
 		80DF921B28F7472D00AA847A /* ImageDetailPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailPageView.swift; sourceTree = "<group>"; };
@@ -115,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80D7AE882916C21B004EDCD9 /* SQLite in Frameworks */,
 				805424AB28F0FE99005F93D3 /* SDWebImageSwiftUI in Frameworks */,
 				801C019A28E525A000F9D6C7 /* Fuzi in Frameworks */,
 			);
@@ -151,6 +157,7 @@
 				80A8780F28EA2641009BB6BF /* ArticleViewModel.swift */,
 				801C019028E5113800F9D6C7 /* HomeViewModel.swift */,
 				80DF921D28F7473F00AA847A /* ImageDetailViewModel.swift */,
+				80D7AE8C2916CC62004EDCD9 /* SavedViewModel.swift */,
 				8053DFE2290895630069EFC9 /* SearchViewModel.swift */,
 			);
 			path = ViewModels;
@@ -235,6 +242,7 @@
 				80D2876028E3BCC0006A8013 /* Assets.xcassets */,
 				801C019228E514D000F9D6C7 /* Client */,
 				801C018D28E50F1600F9D6C7 /* Models */,
+				80D7AE892916C3A3004EDCD9 /* Persistence */,
 				80BC23D128EBB0AD002C81C2 /* Placeholder */,
 				80D2876228E3BCC0006A8013 /* Preview Content */,
 				801C019528E521F300F9D6C7 /* Service */,
@@ -312,6 +320,14 @@
 			path = HomePage;
 			sourceTree = "<group>";
 		};
+		80D7AE892916C3A3004EDCD9 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				80D7AE8A2916C3E3004EDCD9 /* ArticleDataStore.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -331,6 +347,7 @@
 			packageProductDependencies = (
 				801C019928E525A000F9D6C7 /* Fuzi */,
 				805424AA28F0FE99005F93D3 /* SDWebImageSwiftUI */,
+				80D7AE872916C21B004EDCD9 /* SQLite */,
 			);
 			productName = "TorrentFreak Reader";
 			productReference = 80D2875928E3BCBE006A8013 /* TorrentFreak Reader.app */;
@@ -407,6 +424,7 @@
 			packageReferences = (
 				801C019828E525A000F9D6C7 /* XCRemoteSwiftPackageReference "Fuzi" */,
 				805424A928F0FE99005F93D3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				80D7AE862916C21B004EDCD9 /* XCRemoteSwiftPackageReference "SQLite.swift" */,
 			);
 			productRefGroup = 80D2875A28E3BCBE006A8013 /* Products */;
 			projectDirPath = "";
@@ -466,6 +484,8 @@
 				80DF921828F7362800AA847A /* ArticleTableView.swift in Sources */,
 				80DF921C28F7472D00AA847A /* ImageDetailPageView.swift in Sources */,
 				80A8781E28EA3F3E009BB6BF /* ArticleSubHeaderView.swift in Sources */,
+				80D7AE8D2916CC62004EDCD9 /* SavedViewModel.swift in Sources */,
+				80D7AE8B2916C3E3004EDCD9 /* ArticleDataStore.swift in Sources */,
 				8000084829077FE800119605 /* HomeContextMenuView.swift in Sources */,
 				801C018F28E50F3F00F9D6C7 /* Article.swift in Sources */,
 				80A8780728EA0240009BB6BF /* ArticlePageView.swift in Sources */,
@@ -648,8 +668,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -678,8 +698,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -827,6 +847,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		80D7AE862916C21B004EDCD9 /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -839,6 +867,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 805424A928F0FE99005F93D3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		80D7AE872916C21B004EDCD9 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 80D7AE862916C21B004EDCD9 /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

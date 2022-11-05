@@ -27,6 +27,7 @@ struct ArticleView: View {
                     .font(.headline)
                     .fontWeight(.bold)
                     .padding(.top, 5)
+                    .padding(.trailing, 10)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 
                 Spacer()

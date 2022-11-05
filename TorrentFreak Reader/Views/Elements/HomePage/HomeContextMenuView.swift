@@ -31,6 +31,16 @@ struct HomeContextMenuView: View {
         } label: {
             Label("Open in browser", systemImage: "link")
         }
+        
+        Button {
+            let result = ArticleDataStore.shared.insertArticle(article: article)
+            
+            if !result {
+                print("Unable to save article to DB from context menu")
+            }
+        } label: {
+            Label("Save article", systemImage: "square.and.arrow.down")
+        }
     }
 }
 

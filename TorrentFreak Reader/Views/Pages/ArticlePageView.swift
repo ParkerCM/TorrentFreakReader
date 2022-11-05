@@ -62,12 +62,19 @@ struct ArticlePageView: View {
             haptic.impactOccurred()
         }
         .toolbar {
-            ShareLink(item: URL(string: article.articleUrl)!) {
-                Image(systemName: "square.and.arrow.up")
-            }
-            Link(destination: URL(string: article.articleUrl)!) {
-                Image(systemName: "link")
-            }
+            ToolbarItemGroup(placement: .navigationBarTrailing, content: {
+                ShareLink(item: URL(string: article.articleUrl)!) {
+                    Image(systemName: "square.and.arrow.up")
+                }
+                Link(destination: URL(string: article.articleUrl)!) {
+                    Image(systemName: "link")
+                }
+                Button {
+                    viewModel.saveArticleToDataStore(article: article)
+                } label: {
+                    Image(systemName: "square.and.arrow.down")
+                }
+            })
         }
         .overlay {
             if viewModel.articleSections.isEmpty {
