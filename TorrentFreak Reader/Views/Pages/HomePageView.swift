@@ -39,17 +39,17 @@ struct HomePageView: View {
                     }
                     .hidden(viewModel.isPlaceHolder)
             }
+            .refreshable {
+                self.page = 1
+                await viewModel.fetchRefreshedArticles()
+                self.page += 1
+                
+                haptic.impactOccurred()
+            }
             .navigationTitle("News")
             .listStyle(PlainListStyle())
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .refreshable {
-            self.page = 1
-            await viewModel.fetchRefreshedArticles()
-            self.page += 1
-            
-            haptic.impactOccurred()
-        }
         .onAppear {
             if self.initialLoad {
                 getArticles()

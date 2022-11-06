@@ -57,10 +57,6 @@ struct ArticlePageView: View {
                 self.initialLoad = false
             }
         }
-        .refreshable {
-            viewModel.fetchArticleSections(article: article)
-            haptic.impactOccurred()
-        }
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarTrailing, content: {
                 ShareLink(item: URL(string: article.articleUrl)!) {

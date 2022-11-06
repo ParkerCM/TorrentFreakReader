@@ -119,7 +119,7 @@ class ArticleDataStore {
     private func findArticle(article: Article) -> Bool {
         guard let database = db else { return false }
 
-        let filter = self.articles.filter(self.title == article.title && self.date == article.date)
+        let filter = self.articles.filter(self.articleUrl == article.articleUrl)
         do {
             for _ in try database.prepare(filter) {
                 return true
@@ -135,7 +135,7 @@ class ArticleDataStore {
         guard let database = db else { return false }
         
         do {
-            let filter = self.articles.filter(self.title == article.title && self.date == article.date)
+            let filter = self.articles.filter(self.articleUrl == article.articleUrl)
             try database.run(filter.delete())
             
             return true

@@ -9,11 +9,11 @@ import Foundation
 
 class TorrentFreakClient {
     
-    static let shared: TorrentFreakClient = TorrentFreakClient()
+    public static let shared: TorrentFreakClient = TorrentFreakClient()
     
     private init() { }
     
-    func sendRequest(url: URL) async -> String {
+    public func sendRequest(url: URL) async -> String {
         print("URL is \(url)")
         
         do {
