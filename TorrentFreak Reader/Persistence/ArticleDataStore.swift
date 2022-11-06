@@ -12,7 +12,7 @@ class ArticleDataStore {
     
     private static let DB_NAME = "ArticleDB"
     
-    private static let STORE_NAME = "articles.sqlite3"
+    private static let STORE_NAME = "article.sqlite3"
     
     private let articles = Table("articles")
     
@@ -29,6 +29,8 @@ class ArticleDataStore {
     private let category = Expression<String>("category")
     
     private let date = Expression<String>("date")
+    
+    private let addDate = Expression<Int>("addDate")
     
     public static let shared = ArticleDataStore()
     
@@ -67,6 +69,7 @@ class ArticleDataStore {
                 table.column(articleUrl)
                 table.column(category)
                 table.column(date)
+                table.column(addDate)
             })
             print("Created the article table")
         } catch {
@@ -84,7 +87,8 @@ class ArticleDataStore {
                                      self.imageUrl <- article.imageUrl,
                                      self.articleUrl <- article.articleUrl,
                                      self.category <- article.category,
-                                     self.date <- article.date)
+                                     self.date <- article.date,
+                                     self.addDate <- Int(Date().timeIntervalSince1970))
         do {
             try database.run(insert)
             return true
@@ -100,7 +104,7 @@ class ArticleDataStore {
         guard let database = db else { return articles }
 
         do {
-            for article in try database.prepare(self.articles) {
+            for article in try database.prepare(self.articles.order(addDate.desc)) {
                 articles.append(Article(title: article[title],
                                         author: article[author],
                                         imageUrl: article[imageUrl],
