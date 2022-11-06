@@ -62,7 +62,7 @@ class ArticleSectionService {
     }
     
     private func getMainArticleSections(article: Article, document: HTMLDocument) -> [ArticleSection] {
-        let parts = document.xpath("//article/div/p|//article/div/h2|//article/div/center/a|//article/div/center/img|//article/div/p/img|//article/div/p/a/img|//article/div/table|//article/div/div/iframe")
+        let parts = document.xpath("//article/div/p|//article/div/h2|//article/div/center/a|//article/div/center/img|//article/div/p/img|//article/div/p/a/img|//article/div/table|//article/div/div/iframe|//article/div/blockquote")
         var sections: [ArticleSection] = []
         
         for part in parts {
@@ -91,6 +91,19 @@ class ArticleSectionService {
                     if let videoLink = part["src"] {
                         sections.append(ArticleSection(article: article, content: videoLink, sectionType: .video))
                     }
+                case "blockquote":
+                    let paragraphs = part.xpath("//article/div/blockquote//p")
+                    var joinedParagraphs = ""
+                    
+                    for paragraph in paragraphs {
+                        joinedParagraphs += paragraph.stringValue
+                        
+                        if paragraph != paragraphs[paragraphs.count - 1] {
+                            joinedParagraphs += "\n\n"
+                        }
+                    }
+                    
+                    sections.append(ArticleSection(article: article, content: joinedParagraphs, sectionType: .quote))
                 default:
                     print("Hit the default case")
                 }

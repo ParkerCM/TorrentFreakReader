@@ -47,6 +47,9 @@ struct ArticlePageView: View {
                     ArticleVideoView(section: section)
                         .cornerRadius(15)
                         .frame(height: 225)
+                case .quote:
+                    ArticleQuoteView(section: section)
+                        .listRowInsets(EdgeInsets())
                 }
             }
             .listRowSeparator(.hidden)
