@@ -96,7 +96,7 @@ class ArticleService {
 
         let matches = detect.matches(in: imageUrl, options: .reportCompletion, range: NSMakeRange(0, imageUrl.count))
         
-        return Article(title: title, author: getAuthorName(name: author), imageUrl: matches.first?.url?.absoluteString ?? "", articleUrl: articleUrl, category: "", date: date, isLeading: true)
+        return Article(title: title, author: getAuthorName(name: author), imageUrl: matches.first?.url?.absoluteString ?? "", articleUrl: articleUrl, category: "News", date: date, isLeading: true)
     }
     
     private func parsePosts(document: HTMLDocument, getPopular: Bool) -> [Article] {

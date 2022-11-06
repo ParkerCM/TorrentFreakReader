@@ -22,14 +22,8 @@ class ArticleViewModel: ObservableObject {
         }
     }
     
-    func saveArticleToDataStore(article: Article) {
-        let successful = dataStore.insertArticle(article: article)
-        
-        if successful {
-            print("Success")
-        } else {
-            print("Failure")
-        }
+    func saveArticleToDataStore(article: Article) -> Bool {
+        return dataStore.insertArticle(article: article)
     }
     
 }

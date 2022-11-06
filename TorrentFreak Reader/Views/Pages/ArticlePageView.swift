@@ -5,9 +5,12 @@
 //  Created by Parker Madel on 10/2/22.
 //
 
+import AlertToast
 import SwiftUI
 
 struct ArticlePageView: View {
+    
+    @EnvironmentObject var alertViewModel: AlertViewModel
     
     @StateObject var viewModel = ArticleViewModel()
     
@@ -66,7 +69,11 @@ struct ArticlePageView: View {
                     Image(systemName: "link")
                 }
                 Button {
-                    viewModel.saveArticleToDataStore(article: article)
+                    if viewModel.saveArticleToDataStore(article: article) {
+                        alertViewModel.toast = alertViewModel.successToast
+                    } else {
+                        alertViewModel.toast = alertViewModel.errorToast
+                    }
                 } label: {
                     Image(systemName: "square.and.arrow.down")
                 }

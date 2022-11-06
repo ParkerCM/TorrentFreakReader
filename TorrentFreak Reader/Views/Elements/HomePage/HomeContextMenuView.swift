@@ -12,6 +12,8 @@ struct HomeContextMenuView: View {
     
     @Environment(\.openURL) var openURL
     
+    @EnvironmentObject var alertViewModel: AlertViewModel
+    
     var article: Article
     
     var body: some View {
@@ -33,10 +35,10 @@ struct HomeContextMenuView: View {
         }
         
         Button {
-            let result = ArticleDataStore.shared.insertArticle(article: article)
-            
-            if !result {
-                print("Unable to save article to DB from context menu")
+            if ArticleDataStore.shared.insertArticle(article: article) {
+                alertViewModel.toast = alertViewModel.successToast
+            } else {
+                alertViewModel.toast = alertViewModel.errorToast
             }
         } label: {
             Label("Save article", systemImage: "square.and.arrow.down")

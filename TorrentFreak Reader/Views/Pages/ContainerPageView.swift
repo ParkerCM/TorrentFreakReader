@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContainerPageView: View {
+    
+    @StateObject var alertViewModel = AlertViewModel()
+    
     var body: some View {
         TabView {
             HomePageView()
@@ -33,6 +36,10 @@ struct ContainerPageView: View {
             tabBarAppearance.configureWithDefaultBackground()
             UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
         }
+        .toast(isPresenting: $alertViewModel.show, offsetY: -275, alert: {
+            alertViewModel.toast
+        })
+        .environmentObject(alertViewModel)
     }
 }
 

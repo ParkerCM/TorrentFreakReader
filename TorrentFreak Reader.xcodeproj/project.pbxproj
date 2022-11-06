@@ -23,6 +23,8 @@
 		8053DFE72909F65E0069EFC9 /* ArticleSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053DFE62909F65E0069EFC9 /* ArticleSearchResult.swift */; };
 		8053DFE92909FEAF0069EFC9 /* SavedPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053DFE82909FEAF0069EFC9 /* SavedPageView.swift */; };
 		805424AB28F0FE99005F93D3 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 805424AA28F0FE99005F93D3 /* SDWebImageSwiftUI */; };
+		80884DF9291825C4006BA4EF /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80884DF8291825C4006BA4EF /* AlertViewModel.swift */; };
+		80884DFC2918262A006BA4EF /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 80884DFB2918262A006BA4EF /* AlertToast */; };
 		80A8780528E9FD01009BB6BF /* LoadMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A8780428E9FD01009BB6BF /* LoadMoreView.swift */; };
 		80A8780728EA0240009BB6BF /* ArticlePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A8780628EA0240009BB6BF /* ArticlePageView.swift */; };
 		80A8780A28EA183B009BB6BF /* ArticleTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A8780928EA183B009BB6BF /* ArticleTitleView.swift */; };
@@ -84,6 +86,7 @@
 		8053DFE2290895630069EFC9 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		8053DFE62909F65E0069EFC9 /* ArticleSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleSearchResult.swift; sourceTree = "<group>"; };
 		8053DFE82909FEAF0069EFC9 /* SavedPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPageView.swift; sourceTree = "<group>"; };
+		80884DF8291825C4006BA4EF /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
 		80A8780428E9FD01009BB6BF /* LoadMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreView.swift; sourceTree = "<group>"; };
 		80A8780628EA0240009BB6BF /* ArticlePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlePageView.swift; sourceTree = "<group>"; };
 		80A8780928EA183B009BB6BF /* ArticleTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTitleView.swift; sourceTree = "<group>"; };
@@ -121,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80D7AE882916C21B004EDCD9 /* SQLite in Frameworks */,
+				80884DFC2918262A006BA4EF /* AlertToast in Frameworks */,
 				805424AB28F0FE99005F93D3 /* SDWebImageSwiftUI in Frameworks */,
 				801C019A28E525A000F9D6C7 /* Fuzi in Frameworks */,
 			);
@@ -159,6 +163,7 @@
 				80DF921D28F7473F00AA847A /* ImageDetailViewModel.swift */,
 				80D7AE8C2916CC62004EDCD9 /* SavedViewModel.swift */,
 				8053DFE2290895630069EFC9 /* SearchViewModel.swift */,
+				80884DF8291825C4006BA4EF /* AlertViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -348,6 +353,7 @@
 				801C019928E525A000F9D6C7 /* Fuzi */,
 				805424AA28F0FE99005F93D3 /* SDWebImageSwiftUI */,
 				80D7AE872916C21B004EDCD9 /* SQLite */,
+				80884DFB2918262A006BA4EF /* AlertToast */,
 			);
 			productName = "TorrentFreak Reader";
 			productReference = 80D2875928E3BCBE006A8013 /* TorrentFreak Reader.app */;
@@ -425,6 +431,7 @@
 				801C019828E525A000F9D6C7 /* XCRemoteSwiftPackageReference "Fuzi" */,
 				805424A928F0FE99005F93D3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				80D7AE862916C21B004EDCD9 /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+				80884DFA2918262A006BA4EF /* XCRemoteSwiftPackageReference "AlertToast" */,
 			);
 			productRefGroup = 80D2875A28E3BCBE006A8013 /* Products */;
 			projectDirPath = "";
@@ -471,6 +478,7 @@
 				80A8781228EA2AD9009BB6BF /* ArticleSectionService.swift in Sources */,
 				8023A0D629049ABA00F4FFDC /* ArticleVideoView.swift in Sources */,
 				8053DFDF290847390069EFC9 /* ContainerPageView.swift in Sources */,
+				80884DF9291825C4006BA4EF /* AlertViewModel.swift in Sources */,
 				80BC03B92907148100B1164D /* ArticleSectionType.swift in Sources */,
 				80D2875F28E3BCBF006A8013 /* HomePageView.swift in Sources */,
 				80DF921A28F7438B00AA847A /* ArticleImageDetailView.swift in Sources */,
@@ -847,6 +855,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		80884DFA2918262A006BA4EF /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		80D7AE862916C21B004EDCD9 /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
@@ -867,6 +883,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 805424A928F0FE99005F93D3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		80884DFB2918262A006BA4EF /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 80884DFA2918262A006BA4EF /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
 		};
 		80D7AE872916C21B004EDCD9 /* SQLite */ = {
 			isa = XCSwiftPackageProductDependency;
