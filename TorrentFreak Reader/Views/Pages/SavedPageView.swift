@@ -28,7 +28,7 @@ struct SavedPageView: View {
             .listStyle(PlainListStyle())
             .overlay {
                 if viewModel.articles.isEmpty {
-                    Text("You don't have any saved articles")
+                    ErrorTextView(main: "You don't have any saved articles", secondary: nil)
                 }
             }
         }

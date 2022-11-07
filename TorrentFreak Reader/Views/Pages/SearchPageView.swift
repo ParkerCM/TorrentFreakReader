@@ -75,7 +75,7 @@ struct SearchPageView: View {
                 }
                 
                 if self.hasSearchBeenRan && !viewModel.isGettingNextPage && viewModel.popularArticles.isEmpty && viewModel.otherArticles.isEmpty {
-                    Text("No articles returned for your search 😔")
+                    ErrorTextView(main: "No results", secondary: "for \"\(submittedQuery.trimmingCharacters(in: .whitespaces))\"")
                 }
             }
         }

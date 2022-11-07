@@ -70,9 +70,11 @@ struct ArticlePageView: View {
                 ShareLink(item: URL(string: article.articleUrl)!) {
                     Image(systemName: "square.and.arrow.up")
                 }
+                
                 Link(destination: URL(string: article.articleUrl)!) {
                     Image(systemName: "link")
                 }
+                
                 Button {
                     if viewModel.saveArticleToDataStore(article: article) {
                         alertViewModel.toast = alertViewModel.successToast
@@ -88,7 +90,7 @@ struct ArticlePageView: View {
             if viewModel.articleSections.isEmpty {
                 ProgressView()
             } else if viewModel.articleSections.count == 1 {
-                Text("Unable to load article content. Try again later.")
+                ErrorTextView(main: "Unable to load article content", secondary: "Try again later")
             }
         }
     }

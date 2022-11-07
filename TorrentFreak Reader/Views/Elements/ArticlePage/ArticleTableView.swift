@@ -45,7 +45,6 @@ struct ArticleTableView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                 .background(.pink)
             }
-            .cornerRadius(15)
         }
     }
 }

@@ -58,7 +58,7 @@ struct HomePageView: View {
         }
         .overlay {
             if !viewModel.isGettingNextPage && viewModel.articles.isEmpty {
-                Text("Unable to get articles. Try again later.")
+                ErrorTextView(main: "Unable to get articles", secondary: "Try again later")
             }
         }
     }
