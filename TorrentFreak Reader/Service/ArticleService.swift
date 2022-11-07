@@ -133,7 +133,9 @@ class ArticleService {
             let articleUrl = document.xpath("//div[\(i)]/article/a").first?["href"] ?? ""
             let date = document.xpath("//div[\(i)]/article//time").first?.stringValue ?? ""
             
-            articles.append(Article(title: title, author: getAuthorName(name: author), imageUrl: imageUrl, articleUrl: articleUrl, category: category, date: date, isLeading: false))
+            if !title.isEmpty {
+                articles.append(Article(title: title, author: getAuthorName(name: author), imageUrl: imageUrl, articleUrl: articleUrl, category: category, date: date, isLeading: false))
+            }
         }
         
         return articles

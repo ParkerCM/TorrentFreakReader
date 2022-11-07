@@ -160,12 +160,12 @@
 		801C018C28E50F1000F9D6C7 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				80884DF8291825C4006BA4EF /* AlertViewModel.swift */,
 				80A8780F28EA2641009BB6BF /* ArticleViewModel.swift */,
 				801C019028E5113800F9D6C7 /* HomeViewModel.swift */,
 				80DF921D28F7473F00AA847A /* ImageDetailViewModel.swift */,
 				80D7AE8C2916CC62004EDCD9 /* SavedViewModel.swift */,
 				8053DFE2290895630069EFC9 /* SearchViewModel.swift */,
-				80884DF8291825C4006BA4EF /* AlertViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";

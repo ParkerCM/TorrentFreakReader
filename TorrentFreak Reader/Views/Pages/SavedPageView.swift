@@ -24,7 +24,7 @@ struct SavedPageView: View {
                     .listRowSeparator(.hidden)
                 }
             }
-            .navigationTitle("Saved Articles")
+            .navigationTitle("Saved")
             .listStyle(PlainListStyle())
             .overlay {
                 if viewModel.articles.isEmpty {

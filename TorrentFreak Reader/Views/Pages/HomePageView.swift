@@ -37,7 +37,7 @@ struct HomePageView: View {
                     .onTapGesture {
                         getArticles()
                     }
-                    .hidden(viewModel.isPlaceHolder)
+                    .hidden(viewModel.isPlaceHolder || (!viewModel.isGettingNextPage && viewModel.articles.isEmpty))
             }
             .refreshable {
                 self.page = 1
@@ -54,6 +54,11 @@ struct HomePageView: View {
             if self.initialLoad {
                 getArticles()
                 self.initialLoad = false
+            }
+        }
+        .overlay {
+            if !viewModel.isGettingNextPage && viewModel.articles.isEmpty {
+                Text("Unable to get articles. Try again later.")
             }
         }
     }

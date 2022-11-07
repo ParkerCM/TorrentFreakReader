@@ -39,10 +39,18 @@ class ArticleSectionService {
                 var articleSections: [ArticleSection] = []
                 
                 articleSections.append(ArticleSection(article: article, content: "", categories: getCategories(document: document), sectionType: .title))
-                articleSections.append(getArticleExerpt(article: article, document: document))
-                articleSections.append(contentsOf: getMainArticleSections(article: article, document: document))
                 
-                if !articleSections.isEmpty {
+                if let exerpt = getArticleExerpt(article: article, document: document) {
+                    articleSections.append(exerpt)
+                }
+                
+                let returnedSections = getMainArticleSections(article: article, document: document)
+                
+                if !returnedSections.isEmpty {
+                    articleSections.append(contentsOf: returnedSections)
+                }
+                
+                if articleSections.count > 1 {
                     cachedSections[article.hashValue] = articleSections
                 }
                 
@@ -55,10 +63,12 @@ class ArticleSectionService {
         return []
     }
     
-    private func getArticleExerpt(article: Article, document: HTMLDocument) -> ArticleSection {
-        let exerpt = document.xpath("//article/header/p[2]").first?.stringValue ?? ""
+    private func getArticleExerpt(article: Article, document: HTMLDocument) -> ArticleSection? {
+        if let exerpt = document.xpath("//article/header/p[2]").first?.stringValue {
+            return ArticleSection(article: article, content: exerpt.trimmingCharacters(in: .whitespacesAndNewlines), sectionType: .exerpt)
+        }
         
-        return ArticleSection(article: article, content: exerpt.trimmingCharacters(in: .whitespacesAndNewlines), sectionType: .exerpt)
+        return nil
     }
     
     private func getMainArticleSections(article: Article, document: HTMLDocument) -> [ArticleSection] {

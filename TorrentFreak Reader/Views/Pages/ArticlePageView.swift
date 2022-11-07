@@ -22,37 +22,39 @@ struct ArticlePageView: View {
     
     var body: some View {
         List {
-            ForEach(viewModel.articleSections, id: \.self) { section in
-                switch section.sectionType {
-                case .title:
-                    ArticleTitleView(section: section)
-                        .listRowInsets(EdgeInsets())
-                case .image:
-                    ArticleImageView(section: section)
-                        .background(NavigationLink("", destination: ImageDetailPageView(articleSection: section))
-                            .opacity(0.0))
-                        .listRowInsets(EdgeInsets())
-                case .subHeader:
-                    ArticleSubHeaderView(section: section)
-                case .ending:
-                    ArticleExcerptView(section: section)
-                case .exerpt:
-                    ArticleExcerptView(section: section)
-                case .content:
-                    ArticleContentView(section: section)
-                case .table:
-                    ArticleTableView(section: section)
-                        .listRowInsets(EdgeInsets())
-                case .video:
-                    ArticleVideoView(section: section)
-                        .cornerRadius(15)
-                        .frame(height: 225)
-                case .quote:
-                    ArticleQuoteView(section: section)
-                        .listRowInsets(EdgeInsets())
+            if viewModel.articleSections.count > 1 {
+                ForEach(viewModel.articleSections, id: \.self) { section in
+                    switch section.sectionType {
+                    case .title:
+                        ArticleTitleView(section: section)
+                            .listRowInsets(EdgeInsets())
+                    case .image:
+                        ArticleImageView(section: section)
+                            .background(NavigationLink("", destination: ImageDetailPageView(articleSection: section))
+                                .opacity(0.0))
+                            .listRowInsets(EdgeInsets())
+                    case .subHeader:
+                        ArticleSubHeaderView(section: section)
+                    case .ending:
+                        ArticleExcerptView(section: section)
+                    case .exerpt:
+                        ArticleExcerptView(section: section)
+                    case .content:
+                        ArticleContentView(section: section)
+                    case .table:
+                        ArticleTableView(section: section)
+                            .listRowInsets(EdgeInsets())
+                    case .video:
+                        ArticleVideoView(section: section)
+                            .cornerRadius(15)
+                            .frame(height: 225)
+                    case .quote:
+                        ArticleQuoteView(section: section)
+                            .listRowInsets(EdgeInsets())
+                    }
                 }
+                .listRowSeparator(.hidden)
             }
-            .listRowSeparator(.hidden)
         }
         .listStyle(PlainListStyle())
         .navigationBarTitle("Article", displayMode: .inline)
@@ -85,6 +87,8 @@ struct ArticlePageView: View {
         .overlay {
             if viewModel.articleSections.isEmpty {
                 ProgressView()
+            } else if viewModel.articleSections.count == 1 {
+                Text("Unable to load article content. Try again later.")
             }
         }
     }
