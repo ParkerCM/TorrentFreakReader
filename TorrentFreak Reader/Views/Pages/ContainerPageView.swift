@@ -30,6 +30,12 @@ struct ContainerPageView: View {
                     Image(systemName: "square.and.arrow.down")
                     Text("Saved")
                 }
+            
+            SettingsPageView()
+                .tabItem {
+                    Image(systemName: "gearshape.fill")
+                    Text("Settings")
+                }
         }
         .onAppear {
             let tabBarAppearance = UITabBarAppearance()

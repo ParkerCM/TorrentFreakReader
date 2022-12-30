@@ -54,6 +54,7 @@ struct ArticlePageView: View {
                     }
                 }
                 .listRowSeparator(.hidden)
+                .textSelection(.enabled)
             }
         }
         .listStyle(PlainListStyle())

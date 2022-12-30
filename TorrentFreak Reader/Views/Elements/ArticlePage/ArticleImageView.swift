@@ -17,6 +17,8 @@ struct ArticleImageView: View {
             .resizable()
             .scaledToFit()
             .frame(maxWidth: .infinity)
+            .padding(.top, 10)
+            .padding(.bottom, 10)
     }
 }
 

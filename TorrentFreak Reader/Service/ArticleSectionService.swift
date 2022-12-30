@@ -72,7 +72,7 @@ class ArticleSectionService {
     }
     
     private func getMainArticleSections(article: Article, document: HTMLDocument) -> [ArticleSection] {
-        let parts = document.xpath("//article/div/p|//article/div/h2|//article/div/center/a|//article/div/center/img|//article/div/p/img|//article/div/p/a/img|//article/div/table|//article/div/div/iframe|//article/div/blockquote")
+        let parts = document.xpath("//article/div/p|//article/div/h2|//article/div/center/a|//article/div/center/img|//article/div/p/img|//article/div/p/a/img|//article/div/table|//article/div/div/iframe|//article/div/blockquote|//center")
         var sections: [ArticleSection] = []
         
         for part in parts {
@@ -116,6 +116,7 @@ class ArticleSectionService {
                     sections.append(ArticleSection(article: article, content: joinedParagraphs, sectionType: .quote))
                 default:
                     print("Hit the default case")
+                    print(part)
                 }
             }
         }
