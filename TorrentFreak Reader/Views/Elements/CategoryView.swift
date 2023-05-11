@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CategoryView: View {
     
-    var category: String
+    public var category: String
     
     var body: some View {
         VStack  {

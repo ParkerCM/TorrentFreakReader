@@ -10,11 +10,14 @@ import Foundation
 @MainActor
 class HomeViewModel: ObservableObject {
     
-    @Published var articles: [Article] = PlaceHolderData.articles
+    @Published
+    public var articles: [Article] = PlaceHolderData.articles
         
-    @Published var isGettingNextPage = false
+    @Published
+    public var isGettingNextPage = false
     
-    @Published var isPlaceHolder = true
+    @Published
+    public var isPlaceHolder = true
     
     private let service: ArticleService = ArticleService.shared
     

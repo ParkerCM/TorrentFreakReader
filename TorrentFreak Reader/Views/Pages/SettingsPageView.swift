@@ -9,7 +9,8 @@ import SwiftUI
 
 struct SettingsPageView: View {
     
-    @State var currentThing = OpenArticle.inApp
+    @State
+    private var currentThing = OpenArticle.inApp
     
     var body: some View {
         NavigationView {

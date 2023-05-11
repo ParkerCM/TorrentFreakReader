@@ -129,7 +129,7 @@ class ArticleService {
             let title = document.xpath("//div[\(i)]/article//h3").first?.stringValue ?? ""
             let author = document.xpath("//div[\(i)]/article//span").first?.stringValue ?? ""
             let category = document.xpath("//div[\(i)]/article//header//p").first?.stringValue ?? "News"
-            let imageUrl = document.xpath("//div[\(i)]/article//header//img").first?["data-src"] ?? ""
+            let imageUrl = document.xpath("//div[\(i)]/article//header//img").first?["src"] ?? ""
             let articleUrl = document.xpath("//div[\(i)]/article/a").first?["href"] ?? ""
             let date = document.xpath("//div[\(i)]/article//time").first?.stringValue ?? ""
             

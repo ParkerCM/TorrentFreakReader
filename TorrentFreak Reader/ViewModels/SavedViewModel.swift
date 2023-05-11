@@ -9,7 +9,8 @@ import Foundation
 
 class SavedViewModel: ObservableObject {
     
-    @Published public var articles: [Article] = []
+    @Published
+    public var articles: [Article] = []
     
     private let dataStore = ArticleDataStore.shared
     

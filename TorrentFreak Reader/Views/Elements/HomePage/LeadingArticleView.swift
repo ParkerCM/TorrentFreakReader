@@ -10,9 +10,9 @@ import SDWebImageSwiftUI
 
 struct LeadingArticleView: View {
     
-    var article: Article
+    public var article: Article
     
-    let usePlaceHolderImage: Bool
+    public let usePlaceHolderImage: Bool
     
     var body: some View {
         WebImage(url: URL(string: article.imageUrl))

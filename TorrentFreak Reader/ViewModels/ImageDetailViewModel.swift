@@ -10,7 +10,7 @@ import WebKit
 
 class ImageDetailViewModel: ObservableObject {
         
-    let webView: WKWebView
+    public let webView: WKWebView
     
     init() {
         webView = WKWebView(frame: .zero)

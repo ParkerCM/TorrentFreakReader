@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ErrorTextView: View {
     
-    let main: String
+    public let main: String
     
-    let secondary: String?
+    public let secondary: String?
     
     var body: some View {
         VStack {

@@ -10,9 +10,11 @@ import Foundation
 
 class AlertViewModel: ObservableObject {
     
-    @Published var show = false
+    @Published
+    public var show = false
     
-    @Published var toast = AlertToast(type: .error(.red), title: "Error", subTitle: "Error saving article") {
+    @Published
+    public var toast = AlertToast(type: .error(.red), title: "Error", subTitle: "Error saving article") {
         didSet {
             show.toggle()
         }

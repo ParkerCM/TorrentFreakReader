@@ -9,9 +9,10 @@ import SwiftUI
 
 struct ImageDetailPageView: View {
     
-    @StateObject var viewModel = ImageDetailViewModel()
+    @StateObject
+    private var viewModel = ImageDetailViewModel()
     
-    let articleSection: ArticleSection
+    public let articleSection: ArticleSection
     
     private let haptic = UIImpactFeedbackGenerator(style: .rigid)
     

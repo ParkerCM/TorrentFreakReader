@@ -9,15 +9,20 @@ import SwiftUI
 
 struct SearchPageView: View {
     
-    @StateObject var viewModel = SearchViewModel()
+    @StateObject
+    private var viewModel = SearchViewModel()
     
-    @State private var query = ""
+    @State
+    private var query = ""
     
-    @State private var submittedQuery = ""
+    @State
+    private var submittedQuery = ""
     
-    @State private var page = 1
+    @State
+    private var page = 1
     
-    @State private var hasSearchBeenRan = false
+    @State
+    private var hasSearchBeenRan = false
     
     private let haptic = UIImpactFeedbackGenerator(style: .rigid)
         

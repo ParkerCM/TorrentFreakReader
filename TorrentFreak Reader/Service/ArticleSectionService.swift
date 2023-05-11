@@ -72,7 +72,7 @@ class ArticleSectionService {
     }
     
     private func getMainArticleSections(article: Article, document: HTMLDocument) -> [ArticleSection] {
-        let parts = document.xpath("//article/div/p|//article/div/h2|//article/div/center/a|//article/div/center/img|//article/div/p/img|//article/div/p/a/img|//article/div/table|//article/div/div/iframe|//article/div/blockquote|//center")
+        let parts = document.xpath("//article/div/p|//article/div/h2|//article/div/center/a|//article/div/center/img|//article/div/p/img|//article/div/p/a/img|//article/div/table|//article/div/div/iframe|//article/div/blockquote|//center|//article/div/p/src|//article/div/center/iframe")
         var sections: [ArticleSection] = []
         
         for part in parts {

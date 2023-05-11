@@ -10,11 +10,13 @@ import UniformTypeIdentifiers
 
 struct HomeContextMenuView: View {
     
-    @Environment(\.openURL) var openURL
+    @Environment(\.openURL)
+    private var openURL
     
-    @EnvironmentObject var alertViewModel: AlertViewModel
+    @EnvironmentObject
+    private var alertViewModel: AlertViewModel
     
-    var article: Article
+    public var article: Article
     
     var body: some View {
         Button {

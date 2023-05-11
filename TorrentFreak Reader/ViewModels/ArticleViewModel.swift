@@ -10,7 +10,8 @@ import Foundation
 @MainActor
 class ArticleViewModel: ObservableObject {
     
-    @Published var articleSections: [ArticleSection] = []
+    @Published
+    public var articleSections: [ArticleSection] = []
     
     private let sectionService = ArticleSectionService.shared
     

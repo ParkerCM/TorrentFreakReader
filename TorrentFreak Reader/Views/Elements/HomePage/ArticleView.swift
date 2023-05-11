@@ -10,9 +10,9 @@ import SDWebImageSwiftUI
 
 struct ArticleView: View {
     
-    var article: Article
+    public var article: Article
     
-    let usePlaceHolderImage: Bool
+    public let usePlaceHolderImage: Bool
     
     var body: some View {
         HStack (spacing: 15) {

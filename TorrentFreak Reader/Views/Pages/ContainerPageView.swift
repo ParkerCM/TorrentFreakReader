@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContainerPageView: View {
     
-    @StateObject var alertViewModel = AlertViewModel()
+    @StateObject
+    private var alertViewModel = AlertViewModel()
     
     var body: some View {
         TabView {

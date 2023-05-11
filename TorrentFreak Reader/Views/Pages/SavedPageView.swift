@@ -9,9 +9,11 @@ import SwiftUI
 
 struct SavedPageView: View {
     
-    @StateObject var viewModel = SavedViewModel()
+    @StateObject
+    private var viewModel = SavedViewModel()
     
-    @State var isInitialLoad = true
+    @State
+    private var isInitialLoad = true
     
     var body: some View {
         NavigationView {

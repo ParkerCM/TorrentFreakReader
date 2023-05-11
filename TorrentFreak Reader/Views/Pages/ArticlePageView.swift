@@ -10,13 +10,16 @@ import SwiftUI
 
 struct ArticlePageView: View {
     
-    @EnvironmentObject var alertViewModel: AlertViewModel
+    @EnvironmentObject
+    private var alertViewModel: AlertViewModel
     
-    @StateObject var viewModel = ArticleViewModel()
+    @StateObject
+    private var viewModel = ArticleViewModel()
     
-    @State private var initialLoad = true
+    @State
+    private var initialLoad = true
     
-    let article: Article
+    public let article: Article
     
     private let haptic = UIImpactFeedbackGenerator(style: .rigid)
     

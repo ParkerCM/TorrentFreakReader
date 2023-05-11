@@ -12,15 +12,20 @@ class SearchViewModel: ObservableObject {
     
     private let service = ArticleService.shared
     
-    @Published var popularArticles = [Article]()
+    @Published
+    public var popularArticles = [Article]()
     
-    @Published var otherArticles = [Article]()
+    @Published
+    public var otherArticles = [Article]()
     
-    @Published var isGettingNextPage = false
+    @Published
+    public var isGettingNextPage = false
     
-    @Published var searchInProgress = false
+    @Published
+    public var searchInProgress = false
     
-    @Published var doesNextPageExist = true
+    @Published
+    public var doesNextPageExist = true
     
     func performSearch(page: Int, query: String) {
         Task.init {
