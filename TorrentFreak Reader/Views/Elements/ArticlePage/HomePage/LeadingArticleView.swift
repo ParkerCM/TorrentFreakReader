@@ -10,6 +10,9 @@ import SDWebImageSwiftUI
 
 struct LeadingArticleView: View {
     
+    @EnvironmentObject
+    private var viewModel: BaseArticleViewModel
+    
     public var article: Article
     
     public let usePlaceHolderImage: Bool
@@ -55,6 +58,7 @@ struct LeadingArticleView: View {
                 HomeContextMenuView(article: article)
             }, preview: {
                 ArticlePageView(article: article)
+                    .environmentObject(viewModel)
             })
     }
 }
