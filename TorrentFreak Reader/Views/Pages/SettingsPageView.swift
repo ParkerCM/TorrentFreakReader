@@ -10,18 +10,18 @@ import SwiftUI
 struct SettingsPageView: View {
     
     @State
-    private var currentThing = OpenArticle.inApp
-    
+    private var readIndicatorSetting = UserDefaults.standard.bool(forKey: UserDefaultsKeys.displayReadIndicator)
+        
     var body: some View {
         NavigationView {
             List {
-                Text("Hello")
                 Section("App Settings") {
-                    Picker("Thing", selection: $currentThing, content: {
-                        Text("In App").tag(OpenArticle.inApp)
-                        Text("Browser in App").tag(OpenArticle.browserInApp)
-                        Text("Browser").tag(OpenArticle.browser)
-                    })
+                    Toggle(isOn: $readIndicatorSetting, label: {
+                        Text("Display read indicator")
+                    }).onChange(of: readIndicatorSetting) { value in
+                        readIndicatorSetting.toggle()
+                        UserDefaults.standard.set(readIndicatorSetting, forKey: UserDefaultsKeys.displayReadIndicator)
+                    }
                 }
             }
             .navigationTitle("Settings")

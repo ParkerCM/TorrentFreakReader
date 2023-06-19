@@ -9,12 +9,15 @@ import SwiftUI
 
 struct ReadIndicatorOverlayView: View {
     
+    @AppStorage(UserDefaultsKeys.displayReadIndicator)
+    private var displayReadIndicator = false
+    
     public let article: Article
     
     public let cornerRadius: CGFloat
     
     var body: some View {
-        if article.read {
+        if article.read && displayReadIndicator {
             VStack {
                 Spacer()
                 ReadIndicatorView()
