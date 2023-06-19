@@ -27,7 +27,7 @@ struct SearchPageView: View {
     private let haptic = UIImpactFeedbackGenerator(style: .rigid)
         
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 if !viewModel.popularArticles.isEmpty {
                     Section(content: {
@@ -84,6 +84,7 @@ struct SearchPageView: View {
                 }
             }
         }
+        .environmentObject(viewModel as BaseArticleViewModel)
     }
 }
 

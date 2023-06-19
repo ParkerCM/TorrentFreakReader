@@ -10,16 +10,19 @@ import UniformTypeIdentifiers
 
 struct HomePageView: View {
     
-    @StateObject private var viewModel = HomeViewModel()
+    @StateObject
+    private var viewModel = HomeViewModel()
     
-    @State private var initialLoad = true
+    @State
+    private var initialLoad = true
     
-    @State private var page = 1
+    @State
+    private var page = 1
     
     private let haptic = UIImpactFeedbackGenerator(style: .rigid)
         
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 ForEach(viewModel.articles, id: \.self) { article in
                     if article.isLeading {
@@ -55,12 +58,15 @@ struct HomePageView: View {
                 getArticles()
                 self.initialLoad = false
             }
+            
+            viewModel.updateReadIndicator()
         }
         .overlay {
             if !viewModel.isGettingNextPage && viewModel.articles.isEmpty {
                 ErrorTextView(main: "Unable to get articles", secondary: "Try again later")
             }
         }
+        .environmentObject(viewModel as BaseArticleViewModel)
     }
     
     private func getArticles() {

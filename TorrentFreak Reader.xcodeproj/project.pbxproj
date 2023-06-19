@@ -29,6 +29,9 @@
 		80884DF9291825C4006BA4EF /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80884DF8291825C4006BA4EF /* AlertViewModel.swift */; };
 		80884DFC2918262A006BA4EF /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 80884DFB2918262A006BA4EF /* AlertToast */; };
 		80884DFE29185F72006BA4EF /* ArticleQuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80884DFD29185F72006BA4EF /* ArticleQuoteView.swift */; };
+		8088EBB72A40D6220061203C /* BaseArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8088EBB62A40D6220061203C /* BaseArticleViewModel.swift */; };
+		8088EBB92A40E6BC0061203C /* ReadIndicatorOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8088EBB82A40E6BC0061203C /* ReadIndicatorOverlayView.swift */; };
+		808EC9F52A3942780053EB6A /* ReadIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808EC9F42A3942780053EB6A /* ReadIndicatorView.swift */; };
 		80A8780528E9FD01009BB6BF /* LoadMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A8780428E9FD01009BB6BF /* LoadMoreView.swift */; };
 		80A8780728EA0240009BB6BF /* ArticlePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A8780628EA0240009BB6BF /* ArticlePageView.swift */; };
 		80A8780A28EA183B009BB6BF /* ArticleTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A8780928EA183B009BB6BF /* ArticleTitleView.swift */; };
@@ -95,6 +98,9 @@
 		805A7A7D2919C11400C7E32E /* ErrorTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTextView.swift; sourceTree = "<group>"; };
 		80884DF8291825C4006BA4EF /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
 		80884DFD29185F72006BA4EF /* ArticleQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleQuoteView.swift; sourceTree = "<group>"; };
+		8088EBB62A40D6220061203C /* BaseArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseArticleViewModel.swift; sourceTree = "<group>"; };
+		8088EBB82A40E6BC0061203C /* ReadIndicatorOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadIndicatorOverlayView.swift; sourceTree = "<group>"; };
+		808EC9F42A3942780053EB6A /* ReadIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadIndicatorView.swift; sourceTree = "<group>"; };
 		80A8780428E9FD01009BB6BF /* LoadMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreView.swift; sourceTree = "<group>"; };
 		80A8780628EA0240009BB6BF /* ArticlePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlePageView.swift; sourceTree = "<group>"; };
 		80A8780928EA183B009BB6BF /* ArticleTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTitleView.swift; sourceTree = "<group>"; };
@@ -172,6 +178,7 @@
 				80DF921D28F7473F00AA847A /* ImageDetailViewModel.swift */,
 				80D7AE8C2916CC62004EDCD9 /* SavedViewModel.swift */,
 				8053DFE2290895630069EFC9 /* SearchViewModel.swift */,
+				8088EBB62A40D6220061203C /* BaseArticleViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -330,6 +337,8 @@
 				80D2878928E3C9FF006A8013 /* HomePage */,
 				801C018A28E50A5000F9D6C7 /* CategoryView.swift */,
 				805A7A7D2919C11400C7E32E /* ErrorTextView.swift */,
+				808EC9F42A3942780053EB6A /* ReadIndicatorView.swift */,
+				8088EBB82A40E6BC0061203C /* ReadIndicatorOverlayView.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -500,6 +509,7 @@
 				8023A0D629049ABA00F4FFDC /* ArticleVideoView.swift in Sources */,
 				8053DFDF290847390069EFC9 /* ContainerPageView.swift in Sources */,
 				80884DF9291825C4006BA4EF /* AlertViewModel.swift in Sources */,
+				8088EBB92A40E6BC0061203C /* ReadIndicatorOverlayView.swift in Sources */,
 				80BC03B92907148100B1164D /* ArticleSectionType.swift in Sources */,
 				80D2875F28E3BCBF006A8013 /* HomePageView.swift in Sources */,
 				80DF921A28F7438B00AA847A /* ArticleImageDetailView.swift in Sources */,
@@ -511,6 +521,7 @@
 				80A8781028EA2641009BB6BF /* ArticleViewModel.swift in Sources */,
 				80D2878C28E3CA38006A8013 /* LeadingArticleView.swift in Sources */,
 				803D2EAB29286112002A1C49 /* SettingsPageView.swift in Sources */,
+				8088EBB72A40D6220061203C /* BaseArticleViewModel.swift in Sources */,
 				80A8780528E9FD01009BB6BF /* LoadMoreView.swift in Sources */,
 				80884DFE29185F72006BA4EF /* ArticleQuoteView.swift in Sources */,
 				80DF921828F7362800AA847A /* ArticleTableView.swift in Sources */,
@@ -532,6 +543,7 @@
 				801C018B28E50A5000F9D6C7 /* CategoryView.swift in Sources */,
 				8053DFE1290847BC0069EFC9 /* SearchPageView.swift in Sources */,
 				80A8781A28EA3EEF009BB6BF /* ArticleExcerptView.swift in Sources */,
+				808EC9F52A3942780053EB6A /* ReadIndicatorView.swift in Sources */,
 				80A8780A28EA183B009BB6BF /* ArticleTitleView.swift in Sources */,
 				80A8781C28EA3F16009BB6BF /* ArticleContentView.swift in Sources */,
 				801C019128E5113800F9D6C7 /* HomeViewModel.swift in Sources */,
@@ -621,6 +633,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -675,6 +688,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -696,10 +710,13 @@
 				DEVELOPMENT_TEAM = CY9HQHGW6J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TorrentFreak-Reader-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = TorrentFreak;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -726,10 +743,13 @@
 				DEVELOPMENT_TEAM = CY9HQHGW6J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TorrentFreak-Reader-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = TorrentFreak;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (

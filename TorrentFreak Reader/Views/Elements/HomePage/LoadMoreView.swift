@@ -13,7 +13,8 @@ struct LoadMoreView: View {
     
     private let fetchingArticles = "Fetching articles..."
     
-    @Binding var isGettingNextPage: Bool
+    @Binding
+    var isGettingNextPage: Bool
         
     var body: some View {
         Text(self.isGettingNextPage ? fetchingArticles : loadMore)

@@ -17,14 +17,28 @@ class ArticleViewModel: ObservableObject {
     
     private let dataStore = ArticleDataStore.shared
     
-    func fetchArticleSections(article: Article) {
+    public func fetchArticleSections(article: Article, baseViewModel: BaseArticleViewModel, fromContextMenu: Bool) {
         Task.init {
             self.articleSections = await sectionService.getSections(article: article)
+            
+            if !self.articleSections.isEmpty && !fromContextMenu {
+                if saveArticleToHistory(url: article.articleUrl) {
+                    print("Article was added to history")
+                } else {
+                    print("Article was not added to history")
+                }
+                
+                baseViewModel.updateReadIndicator()
+            }
         }
     }
     
-    func saveArticleToDataStore(article: Article) -> Bool {
+    public func saveArticleToDataStore(article: Article) -> Bool {
         return dataStore.insertArticle(article: article)
+    }
+    
+    public func saveArticleToHistory(url: String) -> Bool {
+        return dataStore.addToHistory(url: url)
     }
     
 }

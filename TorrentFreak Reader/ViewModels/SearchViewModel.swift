@@ -8,15 +8,9 @@
 import Foundation
 
 @MainActor
-class SearchViewModel: ObservableObject {
+class SearchViewModel: BaseArticleViewModel {
     
     private let service = ArticleService.shared
-    
-    @Published
-    public var popularArticles = [Article]()
-    
-    @Published
-    public var otherArticles = [Article]()
     
     @Published
     public var isGettingNextPage = false
@@ -50,6 +44,8 @@ class SearchViewModel: ObservableObject {
             }
             
             self.isGettingNextPage = false
+            
+            updateReadIndicator()
         }
     }
     

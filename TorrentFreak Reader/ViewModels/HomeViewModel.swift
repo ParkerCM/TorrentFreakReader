@@ -8,10 +8,7 @@
 import Foundation
 
 @MainActor
-class HomeViewModel: ObservableObject {
-    
-    @Published
-    public var articles: [Article] = PlaceHolderData.articles
+class HomeViewModel: BaseArticleViewModel {
         
     @Published
     public var isGettingNextPage = false
@@ -20,8 +17,13 @@ class HomeViewModel: ObservableObject {
     public var isPlaceHolder = true
     
     private let service: ArticleService = ArticleService.shared
+        
+    override init() {
+        super.init()
+        self.articles = PlaceHolderData.articles
+    }
     
-    func fetchNewArticles(page: Int) {
+    public func fetchNewArticles(page: Int) {
         Task.init {
             self.isGettingNextPage = true
             let articles = await service.getArticles(page: page)
@@ -33,12 +35,15 @@ class HomeViewModel: ObservableObject {
                 self.articles.append(contentsOf: articles)
             }
             
+            updateReadIndicator()
+            
             self.isGettingNextPage = false
         }
     }
     
-    func fetchRefreshedArticles() async {
+    public func fetchRefreshedArticles() async {
         self.articles = await service.getArticles(page: 1)
+        updateReadIndicator()
     }
     
 }

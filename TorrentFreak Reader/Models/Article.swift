@@ -23,4 +23,6 @@ struct Article: Hashable {
     
     var isLeading: Bool
     
+    var read: Bool = false
+    
 }

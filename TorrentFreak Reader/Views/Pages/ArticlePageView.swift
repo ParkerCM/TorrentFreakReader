@@ -13,6 +13,9 @@ struct ArticlePageView: View {
     @EnvironmentObject
     private var alertViewModel: AlertViewModel
     
+    @EnvironmentObject
+    private var baseViewModel: BaseArticleViewModel
+    
     @StateObject
     private var viewModel = ArticleViewModel()
     
@@ -21,7 +24,19 @@ struct ArticlePageView: View {
     
     public let article: Article
     
+    public let fromContextMenu: Bool
+    
     private let haptic = UIImpactFeedbackGenerator(style: .rigid)
+    
+    init(article: Article) {
+        self.article = article
+        self.fromContextMenu = false
+    }
+    
+    init(article: Article, fromContextMenu: Bool) {
+        self.article = article
+        self.fromContextMenu = fromContextMenu
+    }
     
     var body: some View {
         List {
@@ -64,7 +79,7 @@ struct ArticlePageView: View {
         .navigationBarTitle("Article", displayMode: .inline)
         .onAppear {
             if self.initialLoad {
-                viewModel.fetchArticleSections(article: article)
+                viewModel.fetchArticleSections(article: article, baseViewModel: baseViewModel, fromContextMenu: fromContextMenu)
                 haptic.impactOccurred()
                 self.initialLoad = false
             }

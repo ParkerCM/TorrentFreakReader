@@ -16,7 +16,7 @@ struct SavedPageView: View {
     private var isInitialLoad = true
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 if !viewModel.articles.isEmpty {
                     ForEach(viewModel.articles, id: \.self) { article in
@@ -36,7 +36,9 @@ struct SavedPageView: View {
         }
         .onAppear {
             viewModel.getArticles()
+            viewModel.updateReadIndicator()
         }
+        .environmentObject(viewModel as BaseArticleViewModel)
     }
     
     private func delete(at offsets: IndexSet) {
