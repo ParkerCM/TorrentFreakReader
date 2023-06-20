@@ -227,7 +227,6 @@
 		80A8780828EA1815009BB6BF /* ArticlePage */ = {
 			isa = PBXGroup;
 			children = (
-				80D2878928E3C9FF006A8013 /* HomePage */,
 				80A8781B28EA3F16009BB6BF /* ArticleContentView.swift */,
 				80A8781928EA3EEF009BB6BF /* ArticleExcerptView.swift */,
 				80DF921928F7438B00AA847A /* ArticleImageDetailView.swift */,
@@ -338,6 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				80A8780828EA1815009BB6BF /* ArticlePage */,
+				80D2878928E3C9FF006A8013 /* HomePage */,
 				801C018A28E50A5000F9D6C7 /* CategoryView.swift */,
 				805A7A7D2919C11400C7E32E /* ErrorTextView.swift */,
 				8088EBB82A40E6BC0061203C /* ReadIndicatorOverlayView.swift */,
