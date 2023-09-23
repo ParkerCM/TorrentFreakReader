@@ -16,6 +16,11 @@ struct HomeContextMenuView: View {
     @EnvironmentObject
     private var alertViewModel: AlertViewModel
     
+    @EnvironmentObject
+    private var viewModel: BaseArticleViewModel
+    
+    private let articleDataStore = ArticleDataStore.shared
+    
     public var article: Article
     
     var body: some View {
@@ -36,14 +41,54 @@ struct HomeContextMenuView: View {
             Label("Open in browser", systemImage: "link")
         }
         
+        let articleSaved = articleDataStore.findArticle(article: article)
+        
         Button {
-            if ArticleDataStore.shared.insertArticle(article: article) {
-                alertViewModel.toast = alertViewModel.successToast
+            if articleSaved {
+                let result = articleDataStore.deleteArticle(article: article)
+                
+                if result {
+                    alertViewModel.toast = alertViewModel.successfullyDeletedArticleToast
+                } else {
+                    alertViewModel.toast = alertViewModel.errorDeletingArticleToast
+                }
             } else {
-                alertViewModel.toast = alertViewModel.errorToast
+                let result = articleDataStore.insertArticle(article: article)
+                
+                if result {
+                    alertViewModel.toast = alertViewModel.successfullySavedArticleToast
+                } else {
+                    alertViewModel.toast = alertViewModel.errorSavingArticleToast
+                }
             }
         } label: {
-            Label("Save article", systemImage: "square.and.arrow.down")
+            Label(articleSaved ? "Unsave article" : "Save article", systemImage: "square.and.arrow.down")
+        }
+        
+        let articleRead = articleDataStore.isInHistory(url: article.articleUrl)
+        
+        Button {
+            if articleRead {
+                let result = articleDataStore.removeFromHistory(url: article.articleUrl)
+                
+                if result {
+                    viewModel.updateReadIndicator()
+                    alertViewModel.toast = alertViewModel.successfullyMarkedAsUnreadToast
+                } else {
+                    alertViewModel.toast = alertViewModel.errorMarkingAsUnreadToast
+                }
+            } else {
+                let result = articleDataStore.addToHistory(url: article.articleUrl)
+                
+                if result {
+                    viewModel.updateReadIndicator()
+                    alertViewModel.toast = alertViewModel.successfullyMarkedAsReadToast
+                } else {
+                    alertViewModel.toast = alertViewModel.errorMarkingAsReadToast
+                }
+            }
+        } label: {
+            Label(articleRead ? "Mark as unread" : "Mark as read", systemImage: "newspaper")
         }
     }
 }

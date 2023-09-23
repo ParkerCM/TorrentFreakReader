@@ -127,7 +127,7 @@ class ArticleDataStore {
     }
     
     
-    func getAllArticles() -> [Article] {
+    public func getAllArticles() -> [Article] {
         var articles: [Article] = []
         guard let database = db else { return articles }
 
@@ -148,7 +148,7 @@ class ArticleDataStore {
         return articles
     }
     
-    private func findArticle(article: Article) -> Bool {
+    public func findArticle(article: Article) -> Bool {
         guard let database = db else { return false }
 
         let filter = self.article_table.filter(self.article_articleUrl == article.articleUrl)
