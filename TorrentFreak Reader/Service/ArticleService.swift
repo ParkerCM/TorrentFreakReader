@@ -78,7 +78,7 @@ class ArticleService {
     private func parseLeadArticle(document: HTMLDocument) -> Article? {
         let title = document.xpath("//section//h1").first?.stringValue ?? ""
         let author = document.xpath("//section/a//footer/div").first?.stringValue ?? ""
-        let imageUrl = document.xpath("//section/a").first?["style"] ?? ""
+        let imageUrl = document.xpath("//section/a").first?["data-bg"] ?? ""
         let articleUrl = document.xpath("//section/a").first?["href"] ?? ""
         let date = document.xpath("//section/a//time").first?.stringValue ?? ""
         
@@ -129,7 +129,7 @@ class ArticleService {
             let title = document.xpath("//div[\(i)]/article//h3").first?.stringValue ?? ""
             let author = document.xpath("//div[\(i)]/article//span").first?.stringValue ?? ""
             let category = document.xpath("//div[\(i)]/article//header//p").first?.stringValue ?? "News"
-            let imageUrl = document.xpath("//div[\(i)]/article//header//img").first?["src"] ?? ""
+            let imageUrl = document.xpath("//div[\(i)]/article//header//img").first?["data-lazy-src"] ?? ""
             let articleUrl = document.xpath("//div[\(i)]/article/a").first?["href"] ?? ""
             let date = document.xpath("//div[\(i)]/article//time").first?.stringValue ?? ""
             

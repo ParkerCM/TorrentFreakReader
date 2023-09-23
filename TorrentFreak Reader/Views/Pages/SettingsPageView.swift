@@ -18,10 +18,10 @@ struct SettingsPageView: View {
                 Section("App Settings") {
                     Toggle(isOn: $readIndicatorSetting, label: {
                         Text("Display read indicator")
-                    }).onChange(of: readIndicatorSetting) { value in
+                    }).onChange(of: readIndicatorSetting, {
                         readIndicatorSetting.toggle()
                         UserDefaults.standard.set(readIndicatorSetting, forKey: UserDefaultsKeys.displayReadIndicator)
-                    }
+                    })
                 }
             }
             .navigationTitle("Settings")

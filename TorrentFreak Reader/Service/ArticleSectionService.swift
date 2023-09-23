@@ -92,7 +92,7 @@ class ArticleSectionService {
                 case "a":
                     fallthrough
                 case "img":
-                    if let imageLink = part[tag == "img" ? "src" : "href"] {
+                    if let imageLink = part[tag == "img" ? "data-lazy-src" : "href"] {
                         sections.append(ArticleSection(article: article, content: imageLink, sectionType: .image))
                     }
                 case "table":
