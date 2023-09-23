@@ -57,7 +57,7 @@ struct LeadingArticleView: View {
             .contextMenu(menuItems: {
                 HomeContextMenuView(article: article)
             }, preview: {
-                ArticlePageView(article: article)
+                ArticlePageView(article: article, fromContextMenu: true)
                     .environmentObject(viewModel)
             })
     }
