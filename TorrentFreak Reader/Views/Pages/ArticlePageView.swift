@@ -80,7 +80,11 @@ struct ArticlePageView: View {
         .onAppear {
             if self.initialLoad {
                 viewModel.fetchArticleSections(article: article, baseViewModel: baseViewModel, fromContextMenu: fromContextMenu)
-                haptic.impactOccurred()
+                
+                if !fromContextMenu {
+                    haptic.impactOccurred()
+                }
+                
                 self.initialLoad = false
             }
         }
